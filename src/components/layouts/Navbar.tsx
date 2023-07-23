@@ -55,7 +55,7 @@ export default function Navbar() {
             href={path}
             className={clsx(
               path !== pathname &&
-                'hover:text-primary-600 hover:dark:text-primary-400 text-stone-800 hover:bg-transparent dark:text-stone-400 dark:hover:bg-transparent',
+                'hover:text-primary-600 hover:dark:text-primary-400 text-stone-800 hover:bg-transparent dark:text-stone-200 dark:hover:bg-transparent',
               path === pathname && 'bg-primary-50 dark:bg-primary-400/10'
             )}
           >
