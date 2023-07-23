@@ -25,6 +25,8 @@
   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #9f1239 */
   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #881337 */
   /* #endregion  /**======== Primary Color =========== */
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 @layer base {
@@ -58,4 +60,12 @@
     @apply text-sm md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
+
+  .body-width {
+    @apply mx-auto w-11/12 max-w-[69.5rem];
+  }
+
+  .nav-footer-width {
+    @apply mx-auto w-full max-w-[72rem];
+  }
 }

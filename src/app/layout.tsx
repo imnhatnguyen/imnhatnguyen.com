@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 
 import '@/styles/globals.css';
 
+import Navbar from '@/components/layouts/Navbar';
+
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -49,7 +51,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='dark:bg-dark bg-white dark:text-gray-50'>
+      <body className='dark:bg-dark bg-white text-gray-800 dark:text-gray-100'>
+        <Navbar />
         <main className='body-width mb-10 mt-12'>{children}</main>
       </body>
     </html>
