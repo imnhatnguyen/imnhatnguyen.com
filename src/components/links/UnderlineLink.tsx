@@ -1,22 +1,20 @@
 import clsx from 'clsx';
-import * as React from 'react';
+import { forwardRef } from 'react';
 
 import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-const UnderlineLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
+export const UnderlineLinkClassName =
+  'focus-visible-only inline-flex items-center border-b border-dotted border-gray-800 hover:border-solid hover:border-primary-500 dark:border-gray-200 dark:hover:border-primary-400 md:border-b-2';
+
+const UnderlineLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   ({ children, className, ...rest }, ref) => {
     return (
       <UnstyledLink
         ref={ref}
         {...rest}
-        className={clsx(
-          'animated-underline custom-link inline-flex items-center font-medium',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:rounded focus-visible:ring focus-visible:ring-offset-2',
-          'border-dark border-b border-dotted hover:border-black/0',
-          className,
-        )}
+        className={clsx(UnderlineLinkClassName, className)}
       >
         {children}
       </UnstyledLink>
