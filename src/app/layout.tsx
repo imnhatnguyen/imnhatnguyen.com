@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 
 import '@/styles/globals.css';
 
+import Footer from '@/components/layouts/Footer';
 import Navbar from '@/components/layouts/Navbar';
 
 import { siteConfig } from '@/constant/config';
@@ -51,9 +52,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='dark:bg-dark bg-white text-gray-800 dark:text-gray-100'>
+      <body className='dark:bg-dark bg-white transition-colors dark:text-white'>
         <Navbar />
         <main className='body-width mb-10 mt-12'>{children}</main>
+        <Footer />
       </body>
     </html>
   );
