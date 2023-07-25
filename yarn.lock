@@ -5205,10 +5205,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-router-mock@^0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.7.5.tgz#199073ad6d77ddf4fc8bdb847254e5412b8e9e04"
-  integrity sha512-Seglw0lCHfNyZzPIr6KBt5hp/xIIDP/49oD6D7S21j4MGKCXCu95d9zErVrn+XybK3bGz6U+RhK1R+yxyfLMrw==
+next-router-mock@^0.9.7:
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.7.tgz#828e699fba6862e3a3defdb67803c3200a5ab699"
+  integrity sha512-y5ioLCIsdkJKwcoPnrUyocNEJT22RK4wKSg6LO0Q2XkBBvkYprEWy5FiCZt+CA8+qpfxpBlNca76F+glEohbRA==
 
 next-sitemap@^2.5.28:
   version "2.5.28"
