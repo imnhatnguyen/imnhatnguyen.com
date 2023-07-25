@@ -8,9 +8,9 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     target-branch: 'dev'
-    open-pull-requests-limit: 50
+    open-pull-requests-limit: 10
 
   - package-ecosystem: 'github-actions'
     directory: '/'
