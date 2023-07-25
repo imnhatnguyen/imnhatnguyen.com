@@ -44,7 +44,7 @@ export default function Navbar() {
     <nav
       className={clsx(
         'nav-footer-width dark:bg-dark sticky top-0 z-50 flex justify-between space-x-0.5 overflow-x-auto bg-white px-1 py-1.5 min-[480px]:justify-start md:space-x-1',
-        !onTop && 'border-b border-gray-100 dark:border-gray-800'
+        !onTop && 'border-b border-gray-100 dark:border-gray-800',
       )}
     >
       {Object.entries(navItems).map(([path, { name }]) => {
@@ -56,7 +56,7 @@ export default function Navbar() {
             className={clsx(
               path !== pathname &&
                 'hover:text-primary-600 hover:dark:text-primary-400 text-stone-800 hover:bg-transparent dark:text-stone-200 dark:hover:bg-transparent',
-              path === pathname && 'bg-primary-50 dark:bg-primary-400/10'
+              path === pathname && 'bg-primary-50 dark:bg-primary-400/10',
             )}
           >
             {name}

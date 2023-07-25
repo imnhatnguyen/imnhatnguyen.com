@@ -29,7 +29,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       iconClassName,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const disabled = isLoading || buttonDisabled;
 
@@ -66,7 +66,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           'disabled:cursor-not-allowed',
           isLoading &&
             'relative text-transparent transition-none hover:text-transparent disabled:cursor-wait',
-          className
+          className,
         )}
         {...rest}
       >
@@ -78,7 +78,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
                 'text-white': ['primary', 'dark'].includes(type),
                 'text-black': ['light'].includes(type),
                 'text-primary-500': ['outline', 'ghost'].includes(type),
-              }
+              },
             )}
           >
             <ImSpinner2 className='animate-spin' />
@@ -87,7 +87,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         {Icon && <Icon className={clsx(iconClassName)} />}
       </button>
     );
-  }
+  },
 );
 
 export default IconButton;
