@@ -38,7 +38,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       rightIconClassName,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
@@ -67,7 +67,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           ],
           //#endregion  //*======== Types ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
       >
         {LeftIcon && (
@@ -75,7 +75,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             <LeftIcon
               className={clsx(
                 [size === 'base' && 'h-5 w-5'],
-                leftIconClassName
+                leftIconClassName,
               )}
             />
           </div>
@@ -86,14 +86,14 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             <RightIcon
               className={clsx(
                 [size === 'base' && 'h-5 w-5'],
-                rightIconClassName
+                rightIconClassName,
               )}
             />
           </div>
         )}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default ButtonLink;

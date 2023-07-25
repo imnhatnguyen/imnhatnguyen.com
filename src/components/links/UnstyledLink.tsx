@@ -42,7 +42,7 @@ const UnstyledLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
         {children}
       </a>
     );
-  }
+  },
 );
 
 export default UnstyledLink;
