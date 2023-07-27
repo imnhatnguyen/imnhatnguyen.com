@@ -62,7 +62,7 @@ export default function AboutPage() {
 type SectionType = {
   title?: string;
   org?: string;
-  orgImgSrc: string;
+  orgLogoSrc: string;
   date?: string;
   description: JSX.Element;
   id?: string;
@@ -83,14 +83,14 @@ function Section({ sections, groupTitle }: GroupType) {
             <div
               className={clsx(
                 'h-full max-h-[40px] w-full max-w-[40px] translate-y-2 sm:max-h-[50px] sm:max-w-[50px] ',
-                section.orgImgSrc ===
+                section.orgLogoSrc ===
                   'AMWts8CVmgO1swCxN0OXQJaJUYwBfkDzYC2ubtx0wrCuSPAMbGB7hEQfeOTYmDcCZVpGwCGpwbIihJqMOc1QZA3f1cDghPA24MY82LOL3-uoW79t0230MowmB413sYro0qPsAjT0gqUDn4ipmmK_pS3hb8WU'
                   ? 'hidden'
                   : '',
               )}
             >
               <CloudImage
-                publicId={section.orgImgSrc}
+                publicId={section.orgLogoSrc}
                 alt='Logo of organization'
                 width={100}
                 height={100}
@@ -114,19 +114,10 @@ function Section({ sections, groupTitle }: GroupType) {
 
 const experience = [
   {
-    id: 'dev-minimalbeauty',
-    title: 'Developer',
-    org: 'minimalbeauty.vn • Freelance',
-    orgImgSrc:
-      'AMWts8DlQRd0pE4Kqwzrqbo6LoeykpH5MKywBKl6qaIHBmdWbSs95G_6IGS5mM1ggNuDipA3d5Zc9tAVnw2DlUIN2CDTkXmruRMMfWQqIlQ_KGDSy9FbLnX23qhlbcARqhwfTK2kYgCGHJx7lQIgbao_jWJZ',
-    date: 'Aug 2022',
-    description: <p>Skills: HTML, CSS</p>,
-  },
-  {
     id: 'dev-vinai',
     title: 'Developer',
     org: 'VinAI • Full-time',
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8BZKEyShhoeH2ABRDXtSjS72Dj6V8tSDT9IOQHZcKJU6L_PDVOn4Wr3R3BOn3PYO9PFuMhBYrldA8UglppkrHPznthYz49FOgb5qmd2Fpxg7pHT-rrc6Hs-ZrGFdJgMYjLbSNWKAurCrQ76WodxxGo1',
     date: 'Oct 2021 - Dec 2021',
     description: <p> Skills: JavaScript, React</p>,
@@ -135,7 +126,7 @@ const experience = [
     id: 'intern-vinai',
     title: 'Middleware Intern',
     org: 'VinAI • Full-time',
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8BZKEyShhoeH2ABRDXtSjS72Dj6V8tSDT9IOQHZcKJU6L_PDVOn4Wr3R3BOn3PYO9PFuMhBYrldA8UglppkrHPznthYz49FOgb5qmd2Fpxg7pHT-rrc6Hs-ZrGFdJgMYjLbSNWKAurCrQ76WodxxGo1',
     date: 'Mar 2021 - Oct 2021',
     description: <p>Skills: C++, SQLite, Data Distribution Service</p>,
@@ -144,7 +135,7 @@ const experience = [
     id: 'trainee-vinbigdata',
     title: 'Artificial Intelligence Trainee',
     org: 'VinBigData • Full-time',
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8DHYIDfhEkqzQ-wNa1MA7Sex5zqEbq6mz-57S9_M8KRNx5qV0j-Cn4MjSthBSODRN7GGa1-R7t488nIqo1JaqlJUU5SzHdqUjSYPbTZT-3wm1Qie94duWqu-6c_OZh48IQGYC9pid13bd1cjxaU_GC2',
     date: 'Nov 2020 - Mar 2021',
     description: <p>Skills: Python, TensorFlow</p>,
@@ -154,22 +145,36 @@ const experience = [
 const education = [
   {
     id: 'bachelor-uit',
-    title: 'University of Information Technology',
-    org: 'B.S. in Computer Science • Machine Learning Major',
-    orgImgSrc:
+    title: 'Bachelor of Science in Computer Science',
+    org: 'University of Information Technology',
+    orgLogoSrc:
       'AMWts8Bi1kHnEUzUk_cw-OOm9mChLcoLpRpep3Yoz2lquoEXZeWtvYna3SslIJ3RUYUU34xXNpxiD6SzlPtV3370vpXYNEqrDGQS3eDYEJNeAThYr-GCF0bgzjyd33hx3-dDinsIGdx00YBHyIqEkadofxXh',
     date: '2015 - 2020',
-    description: <p>Cumulative GPA: 8.0 (out of 10) </p>,
+    description: (
+      <ul>
+        <li>・ Machine Learning for Computer Vision major</li>
+        <li>・ Cumulative GPA: 8.0 (out of 10)</li>
+      </ul>
+    ),
   },
 ];
 
 const licenses = [
   {
+    id: 'responsivewebdesign-freecodecamp',
+    title: 'Responsive Web Design Certification',
+    org: 'freeCodeCamp.org',
+    orgLogoSrc:
+      'AIL4fc9sHYI0aeHnBmx46anzXQfT3fVGKwndAURhwZvTnAm6QNhN4qlzs8wkO7Wv33aCUxXrwAwS8ZaePAIXQ2nW7QWJwZBCL64XDynvoo2GghfrmmvJDmBQlqmJx_RPExOZPpAk2Pu8PvAuRVcw7iFgzwZ6',
+    date: 'Oct 2022',
+    description: <p>Skills: HTML, CSS</p>,
+  },
+  {
     id: 'deeplearning-deeplearningai',
     title: 'Deep Learning Specialization',
     org: 'DeepLearning.AI',
-    orgImgSrc:
-      'AMWts8Do5zJ8495aKNJ_9rARdYc6hAI1qDaxQFfRsPUMbrAHKQkIR582SJX3o63CnN5jJ2sSJDDrgDCuilU9GdgAu2xgj1HzjS2fi2pB7VEqEEjTNosKXrwPXyfB7XYsBEaiBpTqTeH00y96egRG-UvnfLQ1',
+    orgLogoSrc:
+      'AIL4fc96TTTI2V8srGQs62kCm6LKWxYjPCcGXuPKTO7fPOhT3-V3dGEFNUXmT57rehtW32rWI_uBJi7BnynyDBDapjSvR8Fwdi7LokVnsvNN6kHjDhV0Lb6OLhsXatpRKfVrsrUBYRoFOgOkSqfBun7DlX3N',
     date: 'Oct 2020',
     description: <p>Skills: Python, NumPy, TensorFlow</p>,
   },
@@ -178,7 +183,7 @@ const licenses = [
     title:
       'Machine Learning with TensorFlow on Google Cloud Platform Specialization',
     org: 'Google Cloud Training Online',
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8Bk3LsYVgeZmgOVRutpJutQipRGYfSu9D547U1PnKp0TtFr2U0gq4mJkY8FdSsXeaTQ6oSsFtTwZzKcgor8x3yrFogYVeTy4dLX2jJWVQt1bddbR9r_nvICXEmiS9E--V6WMIg0-oKshv0sw8pYaHVw',
     date: 'May 2020',
     description: <p>Skills: Python, TensorFlow, Google Cloud Platform</p>,
@@ -189,7 +194,7 @@ const knowledge = [
   {
     id: 'knowledge-ux',
     description: <p>UX Research, Wireframing, Prototype, Usability Testing</p>,
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8CVmgO1swCxN0OXQJaJUYwBfkDzYC2ubtx0wrCuSPAMbGB7hEQfeOTYmDcCZVpGwCGpwbIihJqMOc1QZA3f1cDghPA24MY82LOL3-uoW79t0230MowmB413sYro0qPsAjT0gqUDn4ipmmK_pS3hb8WU',
   },
 ];
@@ -198,7 +203,7 @@ const technologies = [
   {
     id: 'technologies-ux',
     description: <p>Figma, HTML5, CSS, JavaScript, React, Git</p>,
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8CVmgO1swCxN0OXQJaJUYwBfkDzYC2ubtx0wrCuSPAMbGB7hEQfeOTYmDcCZVpGwCGpwbIihJqMOc1QZA3f1cDghPA24MY82LOL3-uoW79t0230MowmB413sYro0qPsAjT0gqUDn4ipmmK_pS3hb8WU',
   },
 ];
@@ -208,7 +213,7 @@ const volunteering = [
     id: 'best-spring-volunteer',
     title: 'Mission Accomplishment as a Deputy Team Leader',
     org: 'Spring Volunteer Campaign at the University of Information Technology',
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8ByoITbA7w8aGSb_ONJegWNMys4eWVFKMWLva-ML9X_FjE6TvpCcGv2IsNAuScZgiquL53kdxU5foZGza47uA9JrHwiuHwZIUENjtLS2I9nF4yjyMOm1brKvnsdIWtTdsNHz7G19cNkKM1hZXpcLBjF',
     date: 'Jan 2017 - Feb 2017',
     description: (
@@ -225,8 +230,8 @@ const honors = [
     id: 'scholarship-posco',
     title: 'POSCO TJ Park Scholarship for Asian Universities',
     org: 'POSCO TJ Park Foundation',
-    orgImgSrc:
-      'AMWts8AJxL8U3lNeNHRJdzIszWIOtxbbI-cVadu_5C7Bz5IJCtt6luS5fONYakK9TunKfzLDOwvputLAz4KLk1BAhQD2pXv7mq06Bx2XoTsCIyFAs-DwKwruLfjs2QYhOfG5zccwxbVvQoKlB5D3XzarvS2O',
+    orgLogoSrc:
+      'AIL4fc-Gql5IamjqmQL9W78sLFdHYC9zccN_osJYOz-oVE2pM9yPdav5cWxS6lZvyMve2YZF9a3Tk4bAFMiVa8dv5pN527nr2ihZZdYftFHHT2sobqFVTfMa75peiEhc3QvYdKvNPQrknZv0w90zzcguG0nA',
     date: 'Oct 2019',
     description: (
       <div>
@@ -248,14 +253,14 @@ const languages = [
     id: 'languages-english',
     title: 'English',
     description: <p>Professional working proficiency</p>,
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8CVmgO1swCxN0OXQJaJUYwBfkDzYC2ubtx0wrCuSPAMbGB7hEQfeOTYmDcCZVpGwCGpwbIihJqMOc1QZA3f1cDghPA24MY82LOL3-uoW79t0230MowmB413sYro0qPsAjT0gqUDn4ipmmK_pS3hb8WU',
   },
   {
     id: 'languages-vietnamese',
     title: 'Vietnamese',
     description: <p>Native proficiency</p>,
-    orgImgSrc:
+    orgLogoSrc:
       'AMWts8CVmgO1swCxN0OXQJaJUYwBfkDzYC2ubtx0wrCuSPAMbGB7hEQfeOTYmDcCZVpGwCGpwbIihJqMOc1QZA3f1cDghPA24MY82LOL3-uoW79t0230MowmB413sYro0qPsAjT0gqUDn4ipmmK_pS3hb8WU',
   },
 ];
