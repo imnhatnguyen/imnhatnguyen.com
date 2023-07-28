@@ -57,7 +57,7 @@
 
   body,
   .p {
-    @apply text-sm md:text-base;
+    @apply text-sm sm:text-base;
   }
   /* #endregion  /**======== Typography =========== */
 
@@ -69,3 +69,29 @@
     @apply mx-auto w-full max-w-[72rem];
   }
 }
+
+/* #region  /**=========== Photoswipe =========== */
+.pswp__lightbox-caption {
+  @apply absolute bottom-[12px] left-1/2 z-10 flex w-11/12 -translate-x-1/2 items-center justify-center rounded-2xl bg-neutral-800/90 px-4 py-2 text-left text-gray-100 sm:text-center md:w-8/12 lg:w-7/12;
+}
+
+.pswp__lightbox-caption a {
+  @apply hover:border-primary-500 border-b-2 border-dotted border-gray-200 hover:border-solid;
+}
+
+.lightbox-caption-title-date {
+  @apply inline-flex min-w-fit items-center justify-center space-x-4 text-center;
+}
+
+.lightbox-caption-title {
+  @apply min-w-fit font-medium;
+}
+
+.lightbox-caption-date {
+  @apply text-gray-300;
+}
+
+.lightbox-caption-description {
+  @apply mx-auto items-center justify-center text-left text-gray-200 sm:text-justify;
+}
+/* #endregion  /**=========== Photoswipe =========== */
