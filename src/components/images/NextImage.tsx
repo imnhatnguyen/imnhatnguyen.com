@@ -4,28 +4,26 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
 
-const NextImage: React.FC<RenderPhotoProps> = ({
-  imageProps: { src, alt, title, sizes, className, onClick },
+export default function NextImage({
+  photo,
+  imageProps: { alt, title, sizes, className, onClick },
   wrapperStyle,
-}) => {
+}: RenderPhotoProps) {
   return (
-    <div style={wrapperStyle}>
-      <div className='relative block h-full w-full cursor-pointer'>
-        <Image
-          priority
-          layout='fill'
-          src={src}
-          placeholder='blur'
-          blurDataURL={`${src}=w10`}
-          alt={alt}
-          title={title}
-          sizes={sizes}
-          className={clsx('rounded-xl', className)}
-          onClick={onClick}
-        />
-      </div>
+    <div
+      style={{
+        ...wrapperStyle,
+        position: 'relative',
+      }}
+    >
+      <Image
+        priority
+        fill
+        src={photo}
+        placeholder={'blurDataURL' in photo ? 'blur' : undefined}
+        className={clsx('rounded-xl', className)}
+        {...{ alt, title, sizes, onClick }}
+      />
     </div>
   );
-};
-
-export default NextImage;
+}
