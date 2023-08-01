@@ -1,4 +1,4 @@
-import { allBlogs } from 'contentlayer/generated';
+import { allProjects } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -9,7 +9,7 @@ import { Mdx } from '@/components/mdx/mdx';
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
-  const post = allBlogs.find((post) => post.slug === params.slug);
+  const post = allProjects.find((post) => post.slug === params.slug);
   if (!post) {
     return;
   }
@@ -33,7 +33,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://leerob.io/blog/${slug}`,
+      url: `https://leerob.io/projects/${slug}`,
       images: [
         {
           url: ogImage,
@@ -49,8 +49,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function Blog({ params }) {
-  const post = allBlogs.find((post) => post.slug === params.slug);
+export default async function Project({ params }) {
+  const post = allProjects.find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();

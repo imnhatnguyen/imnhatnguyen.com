@@ -22,17 +22,17 @@ const computedFields = {
       image: doc.image
         ? `https://leerob.io${doc.image}`
         : `https://leerob.io/og?title=${doc.title}`,
-      url: `https://leerob.io/blog/${doc._raw.flattenedPath}`,
+      url: `https://leerob.io/projects/${doc._raw.flattenedPath}`,
       author: {
         '@type': 'Person',
-        name: 'Lee Robinson',
+        name: 'Mason Nguyen',
       },
     }),
   },
 };
 
-export const Blog = defineDocumentType(() => ({
-  name: 'Blog',
+export const Project = defineDocumentType(() => ({
+  name: 'Project',
   filePathPattern: `**/*.mdx`,
   contentType: 'mdx',
   fields: {
@@ -55,8 +55,8 @@ export const Blog = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: 'src/content',
-  documentTypes: [Blog],
+  contentDirPath: 'src/content/projects',
+  documentTypes: [Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
