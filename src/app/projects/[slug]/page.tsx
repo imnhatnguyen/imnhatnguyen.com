@@ -6,8 +6,14 @@ import Balancer from 'react-wrap-balancer';
 
 import { Mdx } from '@/components/mdx/mdx';
 
+interface Params {
+  slug: string;
+}
+
 export async function generateMetadata({
   params,
+}: {
+  params: Params;
 }): Promise<Metadata | undefined> {
   const post = allProjects.find((post) => post.slug === params.slug);
   if (!post) {
@@ -49,7 +55,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function Project({ params }) {
+// write a function that takes in a slug and returns the post
+
+export default async function Project({ params }: { params: Params }) {
   const post = allProjects.find((post) => post.slug === params.slug);
 
   if (!post) {
