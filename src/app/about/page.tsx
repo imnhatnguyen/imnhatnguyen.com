@@ -18,7 +18,7 @@ export default function AboutPage() {
         <h1 className='mb-5 md:mb-7'>About</h1>
         <CloudImage
           priority
-          className='float-right ml-5 mb-5 w-24 sm:w-36 md:w-48 md:-translate-y-6 xl:mr-4 lg:-translate-y-12'
+          className='float-right ml-3 md:ml-5 w-24 sm:w-36 md:w-48 md:-translate-y-6 xl:mr-4 lg:-translate-y-12'
           publicId='AMWts8DO5cGABbo6ErdLXURTAY0KhtIQscvtIHtcyZE7mUaT9s7Tdtl2JDCG4k5uABWETYuwlsEuQCp2kH8cTO1SFAIOSiOHDAaL16UWsyXo7T1rW-Cvecf2VP4rC-wyfx8HLOez5wW1XqZG8r6kuUC04Szr'
           width={350}
           height={350}
