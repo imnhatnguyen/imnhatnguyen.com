@@ -1,5 +1,13 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
+import CloudImage from '@/components/images/CloudImage';
+import Video from '@/components/images/Video';
+
+const components = {
+  CloudImage,
+  Video,
+};
+
 interface MdxProps {
   code: string;
 }
@@ -9,7 +17,7 @@ export function Mdx({ code }: MdxProps) {
 
   return (
     <article className='prose prose-stone dark:prose-invert'>
-      <Component />
+      <Component components={{ ...components }} />
     </article>
   );
 }
