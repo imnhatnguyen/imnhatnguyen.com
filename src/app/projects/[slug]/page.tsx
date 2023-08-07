@@ -77,6 +77,7 @@ export default function Project({ params }: { params: Params }) {
           width={1600}
           height={(1600 * 1) / 2}
           hasCaption={false}
+          priority
         />
         <h1 className='mt-5 text-2xl md:text-3xl'>
           <Balancer>{post.title}</Balancer>
