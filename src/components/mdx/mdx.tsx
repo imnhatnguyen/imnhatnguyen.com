@@ -8,16 +8,15 @@ const components = {
   Video,
 };
 
-interface MdxProps {
-  code: string;
+interface MDXProps {
+  content: string;
 }
 
-export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code);
-
+export function MDX({ content }: MDXProps) {
+  const Component = useMDXComponent(content);
   return (
-    <article className='prose prose-stone dark:prose-invert'>
+    <div className='toc-content prose prose-stone dark:prose-invert max-w-4xl'>
       <Component components={{ ...components }} />
-    </article>
+    </div>
   );
 }

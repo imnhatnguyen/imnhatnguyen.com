@@ -2,10 +2,14 @@ import { allProjects } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { HiOutlineArrowLeft } from 'react-icons/hi';
 import Balancer from 'react-wrap-balancer';
 
-import { Mdx } from '@/components/mdx/mdx';
-
+import CloudImage from '@/components/images/CloudImage';
+import TOC from '@/components/layouts/TOC';
+import ButtonLink from '@/components/links/ButtonLink';
+import UnderlineLink from '@/components/links/UnderlineLink';
+import { MDX } from '@/components/mdx/mdx';
 interface Params {
   slug: string;
 }
@@ -55,29 +59,52 @@ export async function generateMetadata({
   };
 }
 
-// write a function that takes in a slug and returns the post
-
-export default async function Project({ params }: { params: Params }) {
+export default function Project({ params }: { params: Params }) {
   const post = allProjects.find((post) => post.slug === params.slug);
-
   if (!post) {
     notFound();
   }
 
   return (
-    <section>
+    <>
       <script type='application/ld+json' suppressHydrationWarning>
         {JSON.stringify(post.structuredData)}
       </script>
-      <h1 className='font-bold text-2xl tracking-tighter max-w-[650px]'>
-        <Balancer>{post.title}</Balancer>
-      </h1>
-      <div className='flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]'>
-        <p className='text-sm text-neutral-600 dark:text-neutral-400'>
-          {format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}
-        </p>
+      <header>
+        <CloudImage
+          id={post.image}
+          alt={post.title}
+          width={1600}
+          height={(1600 * 1) / 2}
+          hasCaption={false}
+        />
+        <h1 className='mt-5 text-2xl md:text-3xl'>
+          <Balancer>{post.title}</Balancer>
+        </h1>
+        <div className='flex flex-wrap mt-3 text-gray-600 dark:text-gray-300 gap-4'>
+          <p>{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p> {' • '}
+          <p>{post.category}</p> {' • '}
+          <UnderlineLink href={post.link}>
+            {post.link?.substring(8, post.link.length)}
+          </UnderlineLink>
+        </div>
+      </header>
+      <div className='mt-10 lg:grid lg:grid-cols-[auto,250px] lg:gap-12'>
+        <MDX content={post.body.code} />
+        <aside className='hidden lg:block'>
+          <div className='sticky top-32'>
+            <TOC />
+          </div>
+        </aside>
       </div>
-      <Mdx code={post.body.code} />
-    </section>
+      <ButtonLink
+        href='/projects'
+        type='text'
+        leftIcon={HiOutlineArrowLeft}
+        className='mt-5'
+      >
+        Return to all projects
+      </ButtonLink>
+    </>
   );
 }

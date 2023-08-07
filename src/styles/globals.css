@@ -27,6 +27,7 @@
   /* #endregion  /**======== Primary Color =========== */
 
   -webkit-tap-highlight-color: transparent;
+  color-scheme: light dark;
 }
 
 @layer base {
@@ -66,11 +67,11 @@
   }
 
   .nav-footer-width {
-    @apply mx-auto w-full max-w-[72rem];
+    @apply mx-auto w-full max-w-[74rem];
   }
 }
 
-/* #region  /**=========== Photoswipe =========== */
+/* #region  /**=========== PhotoSwipe =========== */
 .pswp__lightbox-caption {
   @apply absolute bottom-[12px] left-1/2 z-10 flex w-11/12 -translate-x-1/2 items-center justify-center rounded-2xl bg-neutral-800/90 px-4 py-2 text-left text-gray-100 sm:text-center md:w-8/12 lg:w-7/12;
 }
@@ -94,4 +95,28 @@
 .lightbox-caption-description {
   @apply mx-auto items-center justify-center text-left text-gray-200 sm:text-justify;
 }
-/* #endregion  /**=========== Photoswipe =========== */
+/* #endregion  /**=========== PhotoSwipe =========== */
+
+/* #region  /**=========== Tocbot =========== */
+.toc-link {
+  @apply text-gray-400 font-normal dark:text-gray-500 no-underline hover:text-gray-700 dark:hover:text-gray-200;
+}
+
+.toc-link:hover,
+.toc-link.is-active-link {
+  @apply font-medium text-gray-900 dark:text-gray-100;
+}
+
+.toc {
+  @apply -ml-3.5;
+}
+
+.toc-list {
+  @apply list-none pl-2.5;
+}
+
+.toc-list-item {
+  @apply -mt-1.5;
+}
+
+/* #endregion  /**=========== Tocbot =========== */
