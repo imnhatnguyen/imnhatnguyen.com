@@ -7,7 +7,7 @@ import PhotoSwipe, { PhotoSwipeOptions } from 'photoswipe';
 import 'photoswipe/style.css';
 
 type CloudImageType = {
-  publicId: string;
+  id: string;
   height: number;
   width: number;
   alt: string;
@@ -19,7 +19,7 @@ type CloudImageType = {
 } & React.ComponentPropsWithoutRef<'figure'>;
 
 export default function CloudImage({
-  publicId,
+  id,
   height,
   width,
   alt,
@@ -28,23 +28,23 @@ export default function CloudImage({
   priority = false,
   ...rest
 }: CloudImageType) {
-  const urlBlurred = `https://lh3.googleusercontent.com/pw/${publicId}=w5`;
-  const url = `https://lh3.googleusercontent.com/pw/${publicId}=w${width}`;
+  const urlBlurred = `https://lh3.googleusercontent.com/pw/${id}=w5`;
+  const url = `https://lh3.googleusercontent.com/pw/${id}=w${width}`;
 
-  const createSrcSet = (publicId: string) => {
+  const createSrcSet = (id: string) => {
     const breakpoints = [1360, 1080, 768, 360];
     let srcset = '';
     for (let i = 0; i < breakpoints.length; i++) {
       srcset = ''.concat(
         srcset,
-        `https://lh3.googleusercontent.com/pw/${publicId}=w${breakpoints[i]}`,
+        `https://lh3.googleusercontent.com/pw/${id}=w${breakpoints[i]}`,
         ` ${breakpoints[i]}w`,
         ', ',
       );
     }
     return srcset.slice(0, -2);
   };
-  const lightboxSrcSet = createSrcSet(publicId);
+  const lightboxSrcSet = createSrcSet(id);
   const lightboxImgWidth = 1360;
   const lightboxImageHeight: number =
     (Number(height) * lightboxImgWidth) / Number(width);
@@ -74,7 +74,7 @@ export default function CloudImage({
         height={height}
         src={url}
         alt={alt}
-        className='cursor-pointer rounded-3xl'
+        className='cursor-pointer mx-auto rounded-3xl'
         onClick={() => {
           const pswp = new PhotoSwipe(options);
           pswp.init();
