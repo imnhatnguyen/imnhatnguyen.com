@@ -10,14 +10,15 @@ import TOC from '@/components/layouts/TOC';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import { MDX } from '@/components/mdx/mdx';
-interface Params {
+
+interface ParamProps {
   slug: string;
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Params;
+  params: ParamProps;
 }): Promise<Metadata | undefined> {
   const post = allProjects.find((post) => post.slug === params.slug);
   if (!post) {
@@ -59,7 +60,7 @@ export async function generateMetadata({
   };
 }
 
-export default function Project({ params }: { params: Params }) {
+export default function Project({ params }: { params: ParamProps }) {
   const post = allProjects.find((post) => post.slug === params.slug);
   if (!post) {
     notFound();
