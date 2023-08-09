@@ -25,7 +25,7 @@ export default function AboutPage() {
           alt='Photo of Mason'
           hasCaption={false}
         />
-        <h2 className='text-lg font-semibold md:text-xl'>Mason Nguyen</h2>
+        <h2>Mason Nguyen</h2>
         <p className='mt-1 font-medium'>UX Designer</p>
 
         <p className='mt-3 max-w-4xl'>
@@ -76,7 +76,7 @@ type GroupType = {
 function Section({ sections, groupTitle }: GroupType) {
   return (
     <div>
-      <h2 className='text-lg font-semibold md:text-xl'>{groupTitle}</h2>
+      <h2>{groupTitle}</h2>
       <div className='mt-2 space-y-5 md:mt-3'>
         {sections.map((section: SectionType) => (
           <div key={section.id} className='ml-3 flex items-start '>

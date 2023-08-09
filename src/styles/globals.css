@@ -31,36 +31,13 @@
 }
 
 @layer base {
-  /* #region  /**=========== Typography =========== */
-  .h0 {
-    @apply text-3xl font-bold md:text-5xl;
+  h1 {
+    @apply text-2xl font-bold md:text-3xl;
   }
 
-  h1,
-  .h1 {
-    @apply text-2xl font-bold md:text-4xl;
+  h2 {
+    @apply text-lg font-semibold md:text-xl;
   }
-
-  h2,
-  .h2 {
-    @apply text-xl font-bold md:text-3xl;
-  }
-
-  h3,
-  .h3 {
-    @apply text-lg font-bold md:text-2xl;
-  }
-
-  h4,
-  .h4 {
-    @apply text-base font-bold md:text-lg;
-  }
-
-  body,
-  .p {
-    @apply text-sm sm:text-base;
-  }
-  /* #endregion  /**======== Typography =========== */
 
   .body-width {
     @apply mx-auto w-11/12 max-w-[69.5rem];

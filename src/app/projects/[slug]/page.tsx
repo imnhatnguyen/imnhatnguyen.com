@@ -80,12 +80,12 @@ export default function Project({ params }: { params: ParamProps }) {
           hasCaption={false}
           priority
         />
-        <h1 className='mt-5 text-2xl md:text-3xl'>
+        <h1 className='mt-5'>
           <Balancer>{post.title}</Balancer>
         </h1>
-        <div className='flex flex-wrap mt-3 text-gray-600 dark:text-gray-300 gap-4'>
-          <p>{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p> {' • '}
-          <p>{post.category}</p> {' • '}
+        <div className='flex flex-wrap mt-3 text-gray-600 dark:text-gray-300 gap-4 md:gap-8'>
+          <p>{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p>
+          <p>{post.category}</p>
           <UnderlineLink href={post.link}>
             {post.link?.substring(8, post.link.length)}
           </UnderlineLink>
