@@ -75,8 +75,8 @@ export default function Project({ params }: { params: ParamProps }) {
         <CloudImage
           id={post.image}
           alt={post.title}
-          width={1600}
-          height={(1600 * 1) / 2}
+          width={1300}
+          height={(1300 * 1) / 2}
           hasCaption={false}
           priority
         />
