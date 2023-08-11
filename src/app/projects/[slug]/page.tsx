@@ -80,7 +80,7 @@ export default function Project({ params }: { params: ParamProps }) {
           hasCaption={false}
           priority
         />
-        <h1 className='mt-5'>
+        <h1 className='mt-5 text-xl md:text-3xl'>
           <Balancer>{post.title}</Balancer>
         </h1>
         <div className='flex flex-wrap mt-3 text-gray-600 dark:text-gray-300 gap-4 md:gap-8'>
