@@ -18,7 +18,7 @@ const imageList = [
     width: 4001,
     height: 6018,
     caption: createCaption(
-      'Into the wood',
+      'In the woods',
       'Jul 6, 2016',
       'This is a portrait of my teacher in a forest of earleaf acacia trees. It is one of the photos which I feel so proud of.',
     ),
