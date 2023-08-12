@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <section>
-      <h1 className='mb-5 md:mb-7'>Gallery</h1>
+      <h1 className='mb-7'>Gallery</h1>
       <Gallery />
     </section>
   );

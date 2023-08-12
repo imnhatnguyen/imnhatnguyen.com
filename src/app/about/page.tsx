@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <>
       <section>
-        <h1 className='mb-5 md:mb-7'>About</h1>
+        <h1 className='mb-5'>About</h1>
         <CloudImage
           priority
           className='float-right ml-3 md:ml-5 w-24 sm:w-36 md:w-48 md:-translate-y-6 xl:mr-4 lg:-translate-y-12'
