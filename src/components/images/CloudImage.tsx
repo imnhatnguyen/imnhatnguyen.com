@@ -13,10 +13,8 @@ type CloudImageType = {
   alt: string;
   className?: string;
   hasCaption?: boolean;
-  rounded?: boolean;
-  circle?: boolean;
   priority?: boolean;
-} & React.ComponentPropsWithoutRef<'figure'>;
+};
 
 export default function CloudImage({
   id,
@@ -26,7 +24,6 @@ export default function CloudImage({
   className,
   hasCaption = true,
   priority = false,
-  ...rest
 }: CloudImageType) {
   const urlBlurred = `https://lh3.googleusercontent.com/pw/${id}=w5`;
   const url = `https://lh3.googleusercontent.com/pw/${id}=w${width}`;
@@ -65,7 +62,7 @@ export default function CloudImage({
   };
 
   return (
-    <figure className={clsx(className, hasCaption && 'text-center')} {...rest}>
+    <figure className={clsx(className, hasCaption && 'text-center')}>
       <Image
         priority={priority}
         width={width}
