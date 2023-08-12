@@ -29,6 +29,7 @@ export default async function ProjectPage() {
               width={550}
               height={(550 * 1) / 2}
               hasCaption={false}
+              priority
             />
             <div className='px-2 py-3 space-y-1'>
               <Balancer className='text-base font-semibold'>
