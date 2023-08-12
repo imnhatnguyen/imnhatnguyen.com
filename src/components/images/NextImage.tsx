@@ -21,7 +21,7 @@ export default function NextImage({
         fill
         src={photo}
         placeholder={'blurDataURL' in photo ? 'blur' : undefined}
-        className={clsx('rounded-xl', className)}
+        className={clsx('rounded-2xl', className)}
         {...{ alt, title, sizes, onClick }}
       />
     </div>
