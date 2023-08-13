@@ -1,4 +1,4 @@
-import { allProjects } from 'contentlayer/generated';
+import { allProjects, Project } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -20,7 +20,7 @@ export async function generateMetadata({
 }: {
   params: ParamProps;
 }): Promise<Metadata | undefined> {
-  const post = allProjects.find((post) => post.slug === params.slug);
+  const post = allProjects.find((post: Project) => post.slug === params.slug);
   if (!post) {
     return;
   }
@@ -61,7 +61,7 @@ export async function generateMetadata({
 }
 
 export default function Project({ params }: { params: ParamProps }) {
-  const post = allProjects.find((post) => post.slug === params.slug);
+  const post = allProjects.find((post: Project) => post.slug === params.slug);
   if (!post) {
     notFound();
   }

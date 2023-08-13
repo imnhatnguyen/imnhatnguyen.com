@@ -1,4 +1,4 @@
-import { allProjects } from 'contentlayer/generated';
+import { allProjects, Project } from 'contentlayer/generated';
 import { compareDesc, format } from 'date-fns';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProjectPage() {
-  const posts = allProjects.sort((a, b) =>
+  const posts = allProjects.sort((a: Project, b: Project) =>
     compareDesc(new Date(a.publishedAt), new Date(b.publishedAt)),
   );
 
@@ -20,7 +20,7 @@ export default async function ProjectPage() {
     <>
       <h1 className='mb-7'>Projects</h1>
       <div className='grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
-        {posts.map((post) => (
+        {posts.map((post: Project) => (
           <Link key={post.slug} href={`/projects/${post.slug}`}>
             <CloudImage
               className='pointer-events-none'
