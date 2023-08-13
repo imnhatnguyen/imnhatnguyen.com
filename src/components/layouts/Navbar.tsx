@@ -25,7 +25,10 @@ const navItems = {
 };
 
 export default function Navbar() {
-  const pathname = usePathname() || '/';
+  let pathname = usePathname() || '/';
+  if (pathname.includes('/projects/')) {
+    pathname = '/projects';
+  }
 
   //#region  //*=========== Scroll Shadow ===========
   const [onTop, setOnTop] = useState<boolean>(true);
