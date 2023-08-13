@@ -54,7 +54,7 @@
     "next-router-mock": "^0.9.7",
     "next-sitemap": "^4.1.8",
     "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
+    "prettier": "^3.0.1",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.1.0",
