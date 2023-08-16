@@ -51,17 +51,17 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           //#region  //*=========== Types ===========
           [
             type === 'filled' && [
-              'bg-primary-600 hover:bg-primary-700 text-white ',
+              'bg-primary-700 hover:bg-primary-800 text-white ',
               'dark:bg-primary-400 dark:text-dark dark:hover:bg-primary-500',
               'disabled:bg-primary-700',
             ],
             type === 'outlined' && [
-              'text-primary-600 dark:text-primary-400',
+              'text-primary-700 dark:text-primary-400',
               'outline outline-1 outline-gray-200  dark:outline-gray-700  md:outline-2',
               'hover:bg-primary-50 dark:hover:bg-primary-400/10',
             ],
             type === 'text' && [
-              'text-primary-600 dark:text-primary-400',
+              'text-primary-700 dark:text-primary-400',
               'hover:bg-primary-50 dark:hover:bg-primary-400/10',
             ],
           ],
