@@ -35,17 +35,9 @@ export default function AboutPage() {
           singing karaoke, listening to K-pop, eating Vietnamese food, and
           taking photos.
         </p>
-        <ButtonLink
-          href='/pdfs/masonjnguyen_com_resume.pdf'
-          type='outlined'
-          leftIcon={HiDownload}
-          className='my-7'
-        >
-          Download PDF resume
-        </ButtonLink>
       </section>
 
-      <section className='max-w-3xl space-y-6 md:ml-5'>
+      <section className='max-w-3xl mt-6 space-y-6 md:ml-5'>
         <Section sections={experience} groupTitle='Experience' />
         <Section sections={education} groupTitle='Education' />
         <Section sections={licenses} groupTitle='Licenses and certifications' />
@@ -55,6 +47,16 @@ export default function AboutPage() {
         <Section sections={volunteering} groupTitle='Volunteering' />
         <Section sections={languages} groupTitle='Languages' />
       </section>
+      <div className='flex mt-6 -mb-2'>
+        <ButtonLink
+          href='/pdfs/masonjnguyen_com_resume.pdf'
+          type='text'
+          leftIcon={HiDownload}
+          className='mx-auto'
+        >
+          Download resume
+        </ButtonLink>
+      </div>
     </>
   );
 }
