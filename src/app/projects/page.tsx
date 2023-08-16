@@ -1,10 +1,8 @@
 import { allProjects, Project } from 'contentlayer/generated';
-import { compareDesc, format } from 'date-fns';
+import { compareDesc } from 'date-fns';
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import Balancer from 'react-wrap-balancer';
 
-import CloudImage from '@/components/images/CloudImage';
+import ProjectCard from '@/components/layouts/ProjectCard';
 
 export const metadata: Metadata = {
   title: 'Project',
@@ -21,25 +19,7 @@ export default async function ProjectPage() {
       <h1 className='mb-7'>Projects</h1>
       <div className='grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
         {posts.map((post: Project) => (
-          <Link key={post.slug} href={`/projects/${post.slug}`}>
-            <CloudImage
-              className='pointer-events-none'
-              id={post.image}
-              alt={post.title}
-              width={550}
-              height={(550 * 1) / 2}
-              hasCaption={false}
-              priority
-            />
-            <div className='px-2 py-3 space-y-1'>
-              <Balancer className='text-base font-semibold'>
-                {post.title}
-              </Balancer>
-              <p className='text-gray-500 dark:text-gray-400'>
-                {format(new Date(post.publishedAt), 'MMM dd, yyyy')}
-              </p>
-            </div>
-          </Link>
+          <ProjectCard key={post.slug} post={post} />
         ))}
       </div>
     </>
