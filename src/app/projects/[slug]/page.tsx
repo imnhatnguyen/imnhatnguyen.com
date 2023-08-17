@@ -68,9 +68,13 @@ export default function Project({ params }: { params: ParamProps }) {
 
   return (
     <>
-      <script type='application/ld+json' suppressHydrationWarning>
-        {JSON.stringify(post.structuredData)}
-      </script>
+      <script
+        type='application/ld+json'
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(post.structuredData),
+        }}
+      ></script>
       <header>
         <CloudImage
           id={post.image}
