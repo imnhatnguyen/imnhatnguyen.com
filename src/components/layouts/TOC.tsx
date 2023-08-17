@@ -8,9 +8,9 @@ export default function TOC() {
     tocbot.init({
       tocSelector: '.toc',
       contentSelector: '.toc-content',
-      headingSelector: 'h2, h3',
-      headingsOffset: 70,
-      scrollSmoothOffset: -70,
+      headingSelector: 'h2, h3, h4',
+      headingsOffset: 64,
+      scrollSmoothOffset: -64,
       scrollSmoothDuration: 0, // Disable smooth scroll
     });
     return () => tocbot.destroy();

@@ -48,6 +48,12 @@
   }
 }
 
+@layer components {
+  *:is(h2, h3, h4, h5, h6) {
+    @apply scroll-mt-16;
+  }
+}
+
 /* #region  /**=========== PhotoSwipe =========== */
 .pswp__lightbox-caption {
   @apply absolute bottom-[12px] left-1/2 z-10 flex w-11/12 -translate-x-1/2 items-center justify-center rounded-2xl bg-neutral-800/90 px-4 py-2 text-left text-gray-100 sm:text-center md:w-8/12 lg:w-7/12;
@@ -85,15 +91,33 @@
 }
 
 .toc {
-  @apply -ml-3.5;
+  @apply -ml-2.5;
 }
 
 .toc-list {
-  @apply list-none pl-2.5;
+  @apply list-none pl-1.5;
 }
 
 .toc-list-item {
   @apply -mt-1.5;
 }
-
 /* #endregion  /**=========== Tocbot =========== */
+
+/* #region  /**=========== rehypeAutolinkHeadings =========== */
+.prose .anchor {
+  @apply absolute invisible no-underline cursor-pointer scroll-mt-36;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+}
+
+.prose .anchor:after {
+  @apply text-gray-400 dark:text-gray-600 scroll-mt-36;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible scroll-mt-36;
+}
+/* #region  /**=========== rehypeAutolinkHeadings =========== */
