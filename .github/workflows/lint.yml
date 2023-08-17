@@ -35,6 +35,3 @@ jobs:
 
       - name: 💅 Prettier check
         run: yarn format:check
-
-      - name: 🃏 Run jest
-        run: yarn test
