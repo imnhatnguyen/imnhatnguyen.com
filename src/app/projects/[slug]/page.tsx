@@ -11,16 +11,14 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import { MDX } from '@/components/mdx/mdx';
 
-interface ParamProps {
-  slug: string;
-}
+type Props = {
+  params: { slug: string };
+};
 
 export async function generateMetadata({
   params,
-}: {
-  params: ParamProps;
-}): Promise<Metadata | undefined> {
-  const post = allProjects.find((post: Project) => post.slug === params.slug);
+}: Props): Promise<Metadata | undefined> {
+  const post = allProjects.find((post) => post.slug === params.slug);
   if (!post) {
     return;
   }
@@ -60,7 +58,7 @@ export async function generateMetadata({
   };
 }
 
-export default function Project({ params }: { params: ParamProps }) {
+export default function Project({ params }: Props) {
   const post = allProjects.find((post: Project) => post.slug === params.slug);
   if (!post) {
     notFound();
