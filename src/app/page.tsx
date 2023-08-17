@@ -6,8 +6,9 @@ import { HiOutlineArrowRight } from 'react-icons/hi';
 import ProjectCard from '@/components/layouts/ProjectCard';
 import ButtonLink from '@/components/links/ButtonLink';
 export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Home page',
+  title: 'Mason Nguyen',
+  description:
+    'Mason Nguyen is a UX Designer with some experience in Machine Learning and Front-End Development',
 };
 
 export default function HomePage() {
