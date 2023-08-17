@@ -78,7 +78,7 @@ const imageList = [
     width: 3231,
     height: 4411,
     caption: createCaption(
-      '<a href="https://henibeauty.com" target="_blank">HeNi Beauty Salon</a>\'s nail design',
+      '<a href="https://henibeauty.com" target="_blank">HeNi Beauty Salon</a>',
       'Nov 20, 2022',
       'I wanted to try something different to decorate the shoot, other than glass balls or bling jewelry. So, I grabbed the cabbage from the fridge and the purple-red curtain. And voilà!',
     ),
