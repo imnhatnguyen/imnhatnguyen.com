@@ -95,5 +95,23 @@
 .toc-list-item {
   @apply -mt-1.5;
 }
-
 /* #endregion  /**=========== Tocbot =========== */
+
+/* #region  /**=========== rehypeAutolinkHeadings =========== */
+.prose .anchor {
+  @apply absolute invisible no-underline cursor-pointer scroll-mt-36;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+}
+
+.prose .anchor:after {
+  @apply text-gray-400 dark:text-gray-600 scroll-mt-36;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible scroll-mt-36;
+}
+/* #region  /**=========== rehypeAutolinkHeadings =========== */
