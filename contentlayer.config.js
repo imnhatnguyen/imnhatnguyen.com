@@ -20,9 +20,9 @@ const computedFields = {
       dateModified: doc.publishedAt,
       description: doc.summary,
       image: doc.image
-        ? `https://leerob.io${doc.image}`
-        : `https://leerob.io/og?title=${doc.title}`,
-      url: `https://leerob.io/projects/${doc._raw.flattenedPath}`,
+        ? `https://masonjnguyen.com${doc.image}`
+        : `https://masonjnguyen.com/og?title=${doc.title}`,
+      url: `https://masonjnguyen.com/projects/${doc._raw.flattenedPath}`,
       author: {
         '@type': 'Person',
         name: 'Mason Nguyen',
