@@ -91,11 +91,11 @@
 }
 
 .toc {
-  @apply -ml-3.5;
+  @apply -ml-2.5;
 }
 
 .toc-list {
-  @apply list-none pl-2.5;
+  @apply list-none pl-1.5;
 }
 
 .toc-list-item {
