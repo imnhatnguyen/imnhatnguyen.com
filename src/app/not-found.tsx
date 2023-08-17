@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import * as React from 'react';
-import { RiAlarmWarningFill } from 'react-icons/ri';
+
+import { EmailButton } from '@/components/buttons/EmailButton';
+import ButtonLink from '@/components/links/ButtonLink';
+import UnderlineLink from '@/components/links/UnderlineLink';
 
 export const metadata: Metadata = {
   title: 'Not Found',
@@ -8,17 +11,26 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <main>
-      <section className='bg-white'>
-        <div className='layout flex min-h-screen flex-col items-center justify-center text-center text-black'>
-          <RiAlarmWarningFill
-            size={60}
-            className='drop-shadow-glow animate-flicker text-red-500'
-          />
-          <h1 className='mt-8 text-4xl md:text-6xl'>Page Not Found</h1>
-          <a href='/'>Back to home</a>
+    <div className='max-w-3xl mx-auto'>
+      <h1 className='mb-7'>Sorry 😢</h1>
+      <div className='mt-3 items-center flex flex-col md:mt-5'>
+        <div>
+          The content you're looking for might have been deleted or moved to
+          another location. Alternatively, the link you've clicked on may be
+          invalid. If you need help, please contact me through{' '}
+          <EmailButton type='underlined' /> or{' '}
+          <UnderlineLink
+            href='https://twitter.com/masonjnguyen'
+            className='font-normal'
+          >
+            Twitter DM
+          </UnderlineLink>
+          .
         </div>
-      </section>
-    </main>
+        <ButtonLink href='/' type='text' className='mt-5'>
+          Return to the Home page
+        </ButtonLink>
+      </div>
+    </div>
   );
 }
