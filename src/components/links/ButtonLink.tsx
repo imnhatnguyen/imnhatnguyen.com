@@ -47,7 +47,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         className={clsx(
           'inline-flex items-center rounded-full font-medium',
           'focus-visible-only',
-          'px-3 py-2 md:px-4 md:py-2',
+          'px-3 md:px-4 py-2',
           //#region  //*=========== Types ===========
           [
             type === 'filled' && [
