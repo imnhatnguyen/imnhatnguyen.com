@@ -13,9 +13,9 @@ type ProjectCardProp = {
 
 export default function ProjectCard({ post }: ProjectCardProp) {
   return (
-    <Link href={`/projects/${post.slug}`}>
+    <Link href={`/projects/${post.slug}`} className='group'>
       <CloudImage
-        className='pointer-events-none'
+        className='rounded-2xl pointer-events-none group-hover:ring dark:group-hover:ring-primary-400 group-hover:ring-primary-500'
         id={post.image}
         alt={post.title}
         width={550}
