@@ -30,7 +30,9 @@ export async function generateMetadata({
     image,
     slug,
   } = post;
-  const ogImage = `https://lh3.googleusercontent.com/pw/${image}=w1200`;
+  const ogImage = image
+    ? `https://leerob.io/og?title=${title}`
+    : `https://lh3.googleusercontent.com/pw/${image}=w1200`;
 
   return {
     title,
