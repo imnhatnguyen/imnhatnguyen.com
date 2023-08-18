@@ -11,16 +11,14 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import { MDX } from '@/components/mdx/mdx';
 
-interface ParamProps {
-  slug: string;
-}
+type Props = {
+  params: { slug: string };
+};
 
 export async function generateMetadata({
   params,
-}: {
-  params: ParamProps;
-}): Promise<Metadata | undefined> {
-  const post = allProjects.find((post: Project) => post.slug === params.slug);
+}: Props): Promise<Metadata | undefined> {
+  const post = allProjects.find((post) => post.slug === params.slug);
   if (!post) {
     return;
   }
@@ -33,8 +31,8 @@ export async function generateMetadata({
     slug,
   } = post;
   const ogImage = image
-    ? `https://leerob.io${image}`
-    : `https://leerob.io/og?title=${title}`;
+    ? `https://lh3.googleusercontent.com/pw/${image}=w1200`
+    : '';
 
   return {
     title,
@@ -44,7 +42,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://leerob.io/projects/${slug}`,
+      url: `https://masonjnguyen.com/projects/${slug}`,
       images: [
         {
           url: ogImage,
@@ -60,7 +58,7 @@ export async function generateMetadata({
   };
 }
 
-export default function Project({ params }: { params: ParamProps }) {
+export default function Project({ params }: Props) {
   const post = allProjects.find((post: Project) => post.slug === params.slug);
   if (!post) {
     notFound();
@@ -68,9 +66,13 @@ export default function Project({ params }: { params: ParamProps }) {
 
   return (
     <>
-      <script type='application/ld+json' suppressHydrationWarning>
-        {JSON.stringify(post.structuredData)}
-      </script>
+      <script
+        type='application/ld+json'
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(post.structuredData),
+        }}
+      ></script>
       <header>
         <CloudImage
           id={post.image}
