@@ -54,9 +54,10 @@ export default function Navbar() {
             key={path}
             href={path}
             className={clsx(
+              '!py-1.5 md:!py-2',
               path !== pathname &&
                 'hover:text-primary-600 hover:dark:text-primary-400 text-stone-800 hover:bg-transparent dark:text-stone-200 dark:hover:bg-transparent',
-              path === pathname && 'bg-primary-50 dark:bg-primary-400/10',
+              path === pathname && 'bg-primary-50  dark:bg-primary-400/10',
             )}
           >
             {name}

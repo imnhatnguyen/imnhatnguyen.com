@@ -97,9 +97,9 @@ function Section({ sections, groupTitle }: GroupType) {
               />
             </div>
             <div className='ml-3.5 space-y-0.5 md:ml-5'>
-              <p className='text-base font-semibold md:text-lg'>
+              <h3 className='text-base font-semibold md:text-lg'>
                 {section.title}
-              </p>
+              </h3>
               <p className='font-medium'>{section.org}</p>
               <p className='text-gray-500 dark:text-gray-400'>{section.date}</p>
               {section.description}
