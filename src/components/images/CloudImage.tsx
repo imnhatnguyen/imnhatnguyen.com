@@ -26,40 +26,25 @@ export default function CloudImage({
   hasCaption = true,
   priority = false,
 }: CloudImageType) {
-  const urlBlurred = `https://lh3.googleusercontent.com/pw/${id}=w5`;
-  const url = `https://lh3.googleusercontent.com/pw/${id}=w${width}`;
+  const baseUrl = 'https://lh3.googleusercontent.com/pw/';
+  const breakpoints = [1920, 1360, 768, 360];
 
-  const createSrcSet = (id: string) => {
-    const breakpoints = [1360, 1080, 768, 360];
-    let srcset = '';
-    for (let i = 0; i < breakpoints.length; i++) {
-      srcset = ''.concat(
-        srcset,
-        `https://lh3.googleusercontent.com/pw/${id}=w${breakpoints[i]}`,
-        ` ${breakpoints[i]}w`,
-        ', ',
-      );
-    }
-    return srcset.slice(0, -2);
-  };
-  const lightboxSrcSet = createSrcSet(id);
-  const lightboxImgWidth = 1360;
-  const lightboxImageHeight: number =
-    (Number(height) * lightboxImgWidth) / Number(width);
+  function createSrcset(id: string): string {
+    return breakpoints
+      .map((breakpoint) => `${baseUrl}${id}=w${breakpoint} ${breakpoint}w`)
+      .join(', ');
+  }
+
   const options: PhotoSwipeOptions = {
     dataSource: [
       {
-        srcset: lightboxSrcSet,
-        src: url,
-        width: lightboxImgWidth,
-        height: lightboxImageHeight,
+        srcset: createSrcset(id),
+        src: `${baseUrl}${id}=w${width}`,
+        width: 1920,
+        height: (height * 1920) / width,
         alt: alt,
       },
     ],
-    initialZoomLevel: 'fit',
-    secondaryZoomLevel: 0.9,
-    maxZoomLevel: 0.9,
-    showHideAnimationType: 'zoom',
   };
 
   return (
@@ -68,9 +53,9 @@ export default function CloudImage({
         priority={priority}
         width={width}
         placeholder='blur'
-        blurDataURL={urlBlurred}
+        blurDataURL={`${baseUrl}${id}=w10`}
         height={height}
-        src={url}
+        src={`${baseUrl}${id}=w${width}`}
         alt={alt}
         className='cursor-pointer mx-auto rounded-2xl'
         onClick={() => {
