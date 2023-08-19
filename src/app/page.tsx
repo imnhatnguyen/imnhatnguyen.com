@@ -5,10 +5,12 @@ import { HiOutlineArrowRight } from 'react-icons/hi';
 
 import ProjectCard from '@/components/layouts/ProjectCard';
 import ButtonLink from '@/components/links/ButtonLink';
+
+import { siteConfig } from '@/constant/config';
+
 export const metadata: Metadata = {
-  title: 'Mason Nguyen',
-  description:
-    'Mason Nguyen is a UX Designer with some experience in Machine Learning and Front-End Development',
+  title: siteConfig.title,
+  description: siteConfig.description,
 };
 
 export default function HomePage() {

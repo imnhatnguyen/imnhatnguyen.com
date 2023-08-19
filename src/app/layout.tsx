@@ -8,6 +8,7 @@ import Navbar from '@/components/layouts/Navbar';
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
@@ -39,8 +40,8 @@ export const metadata: Metadata = {
   },
   authors: [
     {
-      name: 'Mason Nguyen',
-      url: 'https://masonjnguyen.com',
+      name: siteConfig.title,
+      url: siteConfig.url,
     },
   ],
 };

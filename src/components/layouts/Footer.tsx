@@ -3,11 +3,14 @@ import { SiBehance, SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
 import { EmailButton } from '@/components/buttons/EmailButton';
 import IconLink from '@/components/links/IconLink';
 
+import { siteConfig } from '@/constant/config';
 export default function Footer() {
   return (
     <footer className='nav-footer-width flex flex-col items-center space-y-3.5 border-t border-gray-100 pt-7 pb-10 dark:border-gray-800'>
       <SocialLinks />
-      <p>© {new Date().getFullYear()} Mason Nguyen</p>
+      <p>
+        © {new Date().getFullYear()} {siteConfig.title}
+      </p>
     </footer>
   );
 }

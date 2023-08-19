@@ -1,7 +1,6 @@
 export const siteConfig = {
   title: 'Mason Nguyen',
-  description:
-    'Mason is an entry-level UX Designer with some Front-End Development skills',
+  description: 'Android Developer • UX Designer',
 
   url: 'https://masonjnguyen.com',
 };
