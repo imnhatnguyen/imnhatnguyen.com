@@ -5,7 +5,7 @@ import type { RenderPhotoProps } from 'react-photo-album';
 
 import clsxMerge from '@/lib/clsxMerge';
 
-export default function NextImage({
+export default function PhotoAlbumImage({
   photo,
   imageProps: { alt, title, sizes, className, onClick },
   wrapperStyle,
@@ -20,8 +20,9 @@ export default function NextImage({
       <Image
         priority
         fill
-        src={photo}
-        placeholder={'blurDataURL' in photo ? 'blur' : undefined}
+        src={photo.src}
+        placeholder='blur'
+        blurDataURL={`${photo.src}=w10`}
         className={clsxMerge('rounded-2xl', className)}
         {...{ alt, title, sizes, onClick }}
       />

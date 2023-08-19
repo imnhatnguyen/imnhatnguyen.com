@@ -68,7 +68,7 @@
   @apply underline;
 }
 
-.lightbox-caption-title-date {
+.lightbox-caption-header {
   @apply mb-1 inline-flex min-w-fit space-x-4;
 }
 

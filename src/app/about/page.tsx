@@ -6,10 +6,11 @@ import clsxMerge from '@/lib/clsxMerge';
 import CloudImage from '@/components/images/CloudImage';
 import ButtonLink from '@/components/links/ButtonLink';
 
+import { siteConfig } from '@/constant/config';
+
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'Mason is an entry-level UX Designer with a background in Machine Learning and some Front-End Development skills',
+  description: siteConfig.description,
 };
 
 export default function AboutPage() {
@@ -26,7 +27,7 @@ export default function AboutPage() {
           alt='Photo of Mason'
           hasCaption={false}
         />
-        <h2>Mason Nguyen</h2>
+        <h2>{siteConfig.title}</h2>
         <p className='mt-1 font-medium'>UX Designer</p>
 
         <p className='mt-3 max-w-4xl'>

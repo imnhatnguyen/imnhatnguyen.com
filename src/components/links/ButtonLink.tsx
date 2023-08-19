@@ -9,15 +9,10 @@ enum ButtonLinkType {
   'text',
 }
 
-enum ButtonLinkSize {
-  'base',
-}
-
 type ButtonLinkProps = {
   className?: string;
   href: string;
   type?: keyof typeof ButtonLinkType;
-  size?: keyof typeof ButtonLinkSize;
   leftIcon?: IconType;
   rightIcon?: IconType;
   children: React.ReactNode;
@@ -29,7 +24,6 @@ const ButtonLink = ({
   children,
   className,
   type = 'filled',
-  size = 'base',
   leftIcon: LeftIcon,
   rightIcon: RightIcon,
   leftIconClassName,
@@ -42,7 +36,6 @@ const ButtonLink = ({
       className={clsxMerge(
         'inline-flex items-center rounded-full font-medium',
         'px-3 md:px-4 py-2',
-        //#region  //*=========== Types ===========
         [
           type === 'filled' && [
             'bg-primary-700 hover:bg-primary-800 text-white ',
@@ -59,30 +52,19 @@ const ButtonLink = ({
             'hover:bg-primary-50 dark:hover:bg-primary-400/10',
           ],
         ],
-        //#endregion  //*======== Types ===========
         'disabled:cursor-not-allowed',
         className,
       )}
     >
       {LeftIcon && (
-        <div className={clsxMerge([size === 'base' && 'mr-2'])}>
-          <LeftIcon
-            className={clsxMerge(
-              [size === 'base' && 'h-5 w-5'],
-              leftIconClassName,
-            )}
-          />
+        <div className='mr-2'>
+          <LeftIcon className={clsxMerge('h-5 w-5', leftIconClassName)} />
         </div>
       )}
       {children}
       {RightIcon && (
-        <div className={clsxMerge([size === 'base' && 'ml-2'])}>
-          <RightIcon
-            className={clsxMerge(
-              [size === 'base' && 'h-5 w-5'],
-              rightIconClassName,
-            )}
-          />
+        <div className='ml-2'>
+          <RightIcon className={clsxMerge('h-5 w-5', rightIconClassName)} />
         </div>
       )}
     </Link>

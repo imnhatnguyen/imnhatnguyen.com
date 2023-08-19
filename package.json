@@ -10,7 +10,7 @@
     "typecheck": "contentlayer build && tsc --noEmit --incremental false",
     "format": "prettier -w .",
     "format:check": "prettier -c .",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap",
     "prepare": "husky install"
   },
   "dependencies": {

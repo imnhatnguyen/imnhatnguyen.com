@@ -5,62 +5,50 @@ import PhotoAlbum from 'react-photo-album';
 
 import 'photoswipe/style.css';
 
-import imageList from '@/components/images/imageList';
-import NextImage from '@/components/images/NextImage';
+import galleryImages from '@/components/images/galleryImages';
+import PhotoAlbumImage from '@/components/images/PhotoAlbumImage';
 
-function imageLink(transformations, id) {
-  return `https://lh3.googleusercontent.com/pw/${id}${transformations}`;
+const baseUrl = 'https://lh3.googleusercontent.com/pw/';
+const breakpoints = [1920, 1360, 768, 360];
+
+function createSrcset(id) {
+  return breakpoints
+    .map((breakpoint) => `${baseUrl}${id}=w${breakpoint} ${breakpoint}w`)
+    .join(', ');
 }
 
-const breakpoints = [1280, 1024, 768, 640];
-
-function createLightboxSrcSet(id) {
-  let srcset = '';
-  for (let i = 0; i < breakpoints.length; i++) {
-    srcset = ''.concat(
-      srcset,
-      imageLink(`=w${breakpoints[i]}`, id),
-      ` ${breakpoints[i]}w`,
-      ', ',
-    );
-  }
-  return srcset.slice(0, -2);
+function createCaption(title, date, description) {
+  return `<div>
+            <div class="lightbox-caption-header">
+              <div class="lightbox-caption-title">${title}</div>
+              <div class="lightbox-caption-date">${date}</div>
+            </div>
+            <div class="lightbox-caption-description">${description}</div>
+          </div>`;
 }
 
-function createAlbumSrcSet(id, width, height) {
-  return breakpoints.map((breakpoint) => ({
-    src: imageLink(`=w${breakpoint}`, id),
-    width: breakpoint,
-    height: Math.round((Number(height) * breakpoint) / Number(width)),
-  }));
-}
-
-const lightboxImgWidth = 1280;
-const galleryImages = imageList.map((image) => ({
-  src: imageLink(``, image.id),
-  width: lightboxImgWidth,
-  height: Math.round(
-    (Number(image.height) * lightboxImgWidth) / Number(image.width),
+const gallery = galleryImages.map((image) => ({
+  src: `${baseUrl}${image.id}`,
+  width: 1920,
+  height: Math.round((image.height * 1920) / image.width),
+  srcset: createSrcset(image.id),
+  alt: image.caption.title,
+  caption: createCaption(
+    image.caption.title,
+    image.caption.date,
+    image.caption.description,
   ),
-  srcset: createLightboxSrcSet(image.id),
-  alt: image.caption,
-  images: createAlbumSrcSet(image.id, image.width, image.height),
 }));
 
 const options = {
-  dataSource: galleryImages,
-  initialZoomLevel: 'fit',
-  showHideAnimationType: 'zoom',
-  bgOpacity: 0.88,
-  secondaryZoomLevel: 1,
-  maxZoomLevel: 1,
+  dataSource: gallery,
   padding: { bottom: 120 },
 };
 
 export default function Gallery() {
   return (
     <PhotoAlbum
-      photos={galleryImages}
+      photos={gallery}
       layout='rows'
       targetRowHeight={230}
       padding={0}
@@ -76,14 +64,14 @@ export default function Gallery() {
             appendTo: 'root',
             onInit: (el) => {
               lightbox.on('change', () => {
-                el.innerHTML = lightbox.currSlide.data.alt || '';
+                el.innerHTML = lightbox.currSlide.data.caption || '';
               });
             },
           });
         });
         lightbox.init();
       }}
-      renderPhoto={NextImage}
+      renderPhoto={PhotoAlbumImage}
     />
   );
 }
