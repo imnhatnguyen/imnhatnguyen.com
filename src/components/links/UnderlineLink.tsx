@@ -1,5 +1,6 @@
-import clsx from 'clsx';
 import { forwardRef } from 'react';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 import UnstyledLink, {
   UnstyledLinkProps,
@@ -14,7 +15,7 @@ const UnderlineLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
       <UnstyledLink
         ref={ref}
         {...rest}
-        className={clsx(UnderlineLinkClassName, className)}
+        className={clsxMerge(UnderlineLinkClassName, className)}
       >
         {children}
       </UnstyledLink>

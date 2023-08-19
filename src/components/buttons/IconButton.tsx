@@ -1,7 +1,8 @@
-import clsx from 'clsx';
 import { forwardRef } from 'react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 enum IconButtonType {
   'primary',
@@ -39,7 +40,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         ref={ref}
         type='button'
         disabled={disabled}
-        className={clsx(
+        className={clsxMerge(
           'inline-flex items-center justify-center  rounded-full text-2xl font-medium',
           'focus-visible-only',
           'transition-colors duration-75',
@@ -72,7 +73,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       >
         {isLoading && (
           <div
-            className={clsx(
+            className={clsxMerge(
               'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(type),
@@ -84,7 +85,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
-        {Icon && <Icon className={clsx(iconClassName)} />}
+        {Icon && <Icon className={clsxMerge(iconClassName)} />}
       </button>
     );
   },

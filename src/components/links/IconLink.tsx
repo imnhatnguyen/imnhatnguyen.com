@@ -1,6 +1,7 @@
-import clsx from 'clsx';
 import { forwardRef } from 'react';
 import { IconType } from 'react-icons';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 import UnstyledLink, {
   UnstyledLinkProps,
@@ -29,7 +30,7 @@ const IconLink = forwardRef<HTMLAnchorElement, IconLinkProps>(
         aria-label={label}
         ref={ref}
         type='button'
-        className={clsx(
+        className={clsxMerge(
           'inline-flex items-center justify-center rounded-full text-2xl font-medium',
           'focus-visible-only',
           'transition-colors duration-75',
@@ -57,7 +58,7 @@ const IconLink = forwardRef<HTMLAnchorElement, IconLinkProps>(
         )}
         {...rest}
       >
-        {Icon && <Icon className={clsx(iconClassName)} />}
+        {Icon && <Icon className={clsxMerge(iconClassName)} />}
       </UnstyledLink>
     );
   },

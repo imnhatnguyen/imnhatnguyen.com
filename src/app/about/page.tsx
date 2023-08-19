@@ -1,6 +1,7 @@
-import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { HiDownload } from 'react-icons/hi';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 import CloudImage from '@/components/images/CloudImage';
 import ButtonLink from '@/components/links/ButtonLink';
@@ -83,7 +84,7 @@ function Section({ sections, groupTitle }: GroupType) {
         {sections.map((section: SectionType) => (
           <div key={section.id} className='ml-3 flex items-start '>
             <div
-              className={clsx(
+              className={clsxMerge(
                 'h-full max-h-[40px] w-full max-w-[40px] translate-y-2 sm:max-h-[50px] sm:max-w-[50px] ',
                 section.logoId === 'null' ? 'hidden' : '',
               )}

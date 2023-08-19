@@ -1,6 +1,7 @@
-import clsx from 'clsx';
 import { forwardRef } from 'react';
 import { IconType } from 'react-icons';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 import UnstyledLink, {
   UnstyledLinkProps,
@@ -44,7 +45,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       <UnstyledLink
         ref={ref}
         {...rest}
-        className={clsx(
+        className={clsxMerge(
           'inline-flex items-center rounded-full font-medium',
           'focus-visible-only',
           'px-3 md:px-4 py-2',
@@ -71,9 +72,9 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         )}
       >
         {LeftIcon && (
-          <div className={clsx([size === 'base' && 'mr-2'])}>
+          <div className={clsxMerge([size === 'base' && 'mr-2'])}>
             <LeftIcon
-              className={clsx(
+              className={clsxMerge(
                 [size === 'base' && 'h-5 w-5'],
                 leftIconClassName,
               )}
@@ -82,9 +83,9 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         )}
         {children}
         {RightIcon && (
-          <div className={clsx([size === 'base' && 'ml-2'])}>
+          <div className={clsxMerge([size === 'base' && 'ml-2'])}>
             <RightIcon
-              className={clsx(
+              className={clsxMerge(
                 [size === 'base' && 'h-5 w-5'],
                 rightIconClassName,
               )}
