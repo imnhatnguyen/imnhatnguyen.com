@@ -176,7 +176,7 @@
   },
   "Wrap with clsx": {
     "prefix": "cx",
-    "body": ["{clsx([${TM_SELECTED_TEXT}$0])}"]
+    "body": ["{clsxMerge([${TM_SELECTED_TEXT}$0])}"]
   },
   "Wrap with clsxm": {
     "prefix": "cxm",

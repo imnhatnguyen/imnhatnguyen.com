@@ -1,8 +1,9 @@
 'use client';
 
-import clsx from 'clsx';
 import Image from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 export default function NextImage({
   photo,
@@ -21,7 +22,7 @@ export default function NextImage({
         fill
         src={photo}
         placeholder={'blurDataURL' in photo ? 'blur' : undefined}
-        className={clsx('rounded-2xl', className)}
+        className={clsxMerge('rounded-2xl', className)}
         {...{ alt, title, sizes, onClick }}
       />
     </div>

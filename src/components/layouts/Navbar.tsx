@@ -1,8 +1,9 @@
 'use client';
 
-import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 import ButtonLink from '@/components/links/ButtonLink';
 
@@ -42,7 +43,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={clsx(
+      className={clsxMerge(
         'nav-footer-width dark:bg-dark sticky top-0 z-50 flex justify-between space-x-0.5 overflow-x-auto bg-white px-1 py-1.5 min-[480px]:justify-start md:space-x-1',
         !onTop && 'border-b border-gray-100 dark:border-gray-800',
       )}
@@ -53,10 +54,10 @@ export default function Navbar() {
             type='text'
             key={path}
             href={path}
-            className={clsx(
-              '!py-1.5 md:!py-2',
+            className={clsxMerge(
+              'py-1.5 md:py-2',
               path !== pathname &&
-                'hover:text-primary-600 hover:dark:text-primary-400 text-stone-800 hover:bg-transparent dark:text-stone-200 dark:hover:bg-transparent',
+                'hover:text-primary-600 hover:dark:text-primary-400 text-gray-800 hover:bg-transparent dark:text-gray-200 dark:hover:bg-transparent',
               path === pathname && 'bg-primary-50  dark:bg-primary-400/10',
             )}
           >

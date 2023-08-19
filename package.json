@@ -27,6 +27,7 @@
     "react-wrap-balancer": "^1.1.0",
     "rehype-pretty-code": "^0.10.0",
     "shiki": "^0.14.3",
+    "tailwind-merge": "^1.14.0",
     "tocbot": "^4.21.1"
   },
   "devDependencies": {

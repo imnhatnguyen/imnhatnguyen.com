@@ -1,10 +1,11 @@
 'use client';
 
-import clsx from 'clsx';
 import Image from 'next/image';
 import PhotoSwipe, { PhotoSwipeOptions } from 'photoswipe';
 
 import 'photoswipe/style.css';
+
+import clsxMerge from '@/lib/clsxMerge';
 
 type CloudImageType = {
   id: string;
@@ -62,7 +63,7 @@ export default function CloudImage({
   };
 
   return (
-    <figure className={clsx(className, hasCaption && 'text-center')}>
+    <figure className={clsxMerge(className, hasCaption && 'text-center')}>
       <Image
         priority={priority}
         width={width}

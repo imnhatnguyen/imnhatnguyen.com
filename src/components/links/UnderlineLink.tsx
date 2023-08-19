@@ -1,25 +1,25 @@
-import clsx from 'clsx';
-import { forwardRef } from 'react';
+import Link from 'next/link';
 
-import UnstyledLink, {
-  UnstyledLinkProps,
-} from '@/components/links/UnstyledLink';
+import clsxMerge from '@/lib/clsxMerge';
 
-export const UnderlineLinkClassName =
-  'focus-visible-only inline-flex items-center underline';
+export const UnderlineLinkClassName = 'inline-flex items-center underline';
 
-const UnderlineLink = forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
-  ({ children, className, ...rest }, ref) => {
-    return (
-      <UnstyledLink
-        ref={ref}
-        {...rest}
-        className={clsx(UnderlineLinkClassName, className)}
-      >
-        {children}
-      </UnstyledLink>
-    );
-  },
-);
+type UnderlineLinkProps = {
+  className?: string;
+  href: string;
+  children: React.ReactNode;
+};
+
+const UnderlineLink = ({
+  children,
+  className,
+  ...rest
+}: UnderlineLinkProps) => {
+  return (
+    <Link {...rest} className={clsxMerge(UnderlineLinkClassName, className)}>
+      {children}
+    </Link>
+  );
+};
 
 export default UnderlineLink;
