@@ -33,7 +33,6 @@ const IconLink = forwardRef<HTMLAnchorElement, IconLinkProps>(
         className={clsxMerge(
           'inline-flex items-center justify-center rounded-full text-2xl font-medium',
           'focus-visible-only',
-          'transition-colors duration-75',
           'min-h-[28px] min-w-[28px] p-2.5 md:min-h-[34px] md:min-w-[34px]',
           [
             type === 'primary' && [
