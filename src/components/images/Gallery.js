@@ -6,7 +6,7 @@ import PhotoAlbum from 'react-photo-album';
 import 'photoswipe/style.css';
 
 import galleryImages from '@/components/images/galleryImages';
-import NextImage from '@/components/images/NextImage';
+import PhotoAlbumImage from '@/components/images/PhotoAlbumImage';
 
 const baseUrl = 'https://lh3.googleusercontent.com/pw/';
 const breakpoints = [1920, 1360, 768, 360];
@@ -71,7 +71,7 @@ export default function Gallery() {
         });
         lightbox.init();
       }}
-      renderPhoto={NextImage}
+      renderPhoto={PhotoAlbumImage}
     />
   );
 }
