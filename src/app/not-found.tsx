@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import * as React from 'react';
+import { HiOutlineArrowLeft } from 'react-icons/hi';
 
 import { EmailButton } from '@/components/buttons/EmailButton';
 import ButtonLink from '@/components/links/ButtonLink';
@@ -27,7 +28,12 @@ export default function NotFound() {
           </UnderlineLink>
           .
         </div>
-        <ButtonLink href='/' type='text' className='mt-5'>
+        <ButtonLink
+          href='/'
+          type='text'
+          className='mt-5'
+          leftIcon={HiOutlineArrowLeft}
+        >
           Return to the Home page
         </ButtonLink>
       </div>
