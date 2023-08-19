@@ -54,7 +54,6 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
           className={clsxMerge(
             'inline-flex items-center rounded-full font-medium',
             'px-3 py-2 md:px-4 md:py-2',
-            'text-gray-700 dark:text-gray-200',
             'hover:text-primary-600 dark:hover:text-primary-400',
             'hover:bg-primary-50 dark:hover:bg-primary-400/10',
           )}

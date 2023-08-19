@@ -17,11 +17,9 @@ export default function TOC() {
   }, []);
 
   return (
-    <div className='prose prose-stone dark:prose-invert max-h-[calc(100vh-9rem-113px)] overflow-auto -mr-4'>
-      <p className='text-gray-900 dark:text-gray-100 text-lg font-medium'>
-        On this page
-      </p>
-      <div className='toc'></div>
+    <div className='max-h-[calc(100vh-9rem-113px)] overflow-auto -mr-4'>
+      <h2 className='text-lg font-medium'>On this page</h2>
+      <div className='mt-4 toc prose prose-stone dark:prose-invert'></div>
     </div>
   );
 }

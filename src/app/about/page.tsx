@@ -28,7 +28,7 @@ export default function AboutPage() {
           hasCaption={false}
         />
         <h2>{siteConfig.title}</h2>
-        <p className='mt-1 font-medium'>UX Designer</p>
+        <h3 className='mt-1 font-medium'>UX Designer</h3>
 
         <p className='mt-3 max-w-4xl'>
           I am an entry-level UX Designer with some Front-End Development
@@ -102,7 +102,7 @@ function Section({ sections, groupTitle }: GroupType) {
               <h3 className='text-base font-semibold md:text-lg'>
                 {section.title}
               </h3>
-              <p className='font-medium'>{section.org}</p>
+              <h4 className='font-medium'>{section.org}</h4>
               <p className='text-gray-500 dark:text-gray-400'>{section.date}</p>
               {section.description}
             </div>
