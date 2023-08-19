@@ -47,7 +47,6 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         {...rest}
         className={clsxMerge(
           'inline-flex items-center rounded-full font-medium',
-          'focus-visible-only',
           'px-3 md:px-4 py-2',
           //#region  //*=========== Types ===========
           [
