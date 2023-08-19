@@ -20,7 +20,6 @@ function SocialLinks() {
         <IconLink
           label={social.id}
           key={social.id}
-          type='text'
           href={social.href}
           icon={social.icon}
         />
