@@ -26,10 +26,10 @@ export default function HomePage() {
           Xin chào
         </h2>
         <h1 className='-ml-0.5 mt-5 text-4xl md:text-5xl'>My name is Mason</h1>
-        <h3 className='mt-6 max-w-4xl text-lg'>
+        <p className='mt-6 max-w-4xl text-lg dark:text-gray-100 text-gray-900'>
           I'm a UX Designer with some experience in Machine Learning and
           Front-End Development
-        </h3>
+        </p>
         <div className='mt-6 space-x-4'>
           <ButtonLink href='/projects/heni-beauty-hair-and-nails-salon'>
             Pet project
