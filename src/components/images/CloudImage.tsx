@@ -45,6 +45,7 @@ export default function CloudImage({
         alt: alt,
       },
     ],
+    bgOpacity: 0.9,
   };
 
   return (

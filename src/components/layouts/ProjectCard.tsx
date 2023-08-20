@@ -23,8 +23,10 @@ export default function ProjectCard({ post }: ProjectCardProp) {
         hasCaption={false}
         priority
       />
-      <div className='px-2 py-3 space-y-1'>
-        <Balancer className='text-base font-semibold'>{post.title}</Balancer>
+      <div className='px-2 pt-4 space-y-0.5'>
+        <h2>
+          <Balancer className='text-base font-semibold'>{post.title}</Balancer>
+        </h2>
         <p className='text-gray-500 dark:text-gray-400'>
           {format(new Date(post.publishedAt), 'MMM dd, yyyy')}
         </p>

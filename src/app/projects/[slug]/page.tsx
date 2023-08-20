@@ -85,7 +85,7 @@ export default function Project({ params }: Props) {
         <h1 className='mt-5 text-xl md:text-3xl'>
           <Balancer>{post.title}</Balancer>
         </h1>
-        <div className='flex flex-wrap mt-3 text-gray-600 dark:text-gray-300 gap-4 md:gap-8'>
+        <div className='flex flex-wrap mt-3 gap-4 md:gap-8'>
           <p>{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p>
           <p>{post.category}</p>
           <UnderlineLink href={post.link}>

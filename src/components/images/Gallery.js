@@ -20,7 +20,7 @@ function createSrcset(id) {
 function createCaption(title, date, description) {
   return `<div>
             <div class="lightbox-caption-header">
-              <div class="lightbox-caption-title">${title}</div>
+              <h2 class="lightbox-caption-title">${title}</h2>
               <div class="lightbox-caption-date">${date}</div>
             </div>
             <div class="lightbox-caption-description">${description}</div>
@@ -42,6 +42,7 @@ const gallery = galleryImages.map((image) => ({
 
 const options = {
   dataSource: gallery,
+  bgOpacity: 0.9,
   padding: { bottom: 120 },
 };
 

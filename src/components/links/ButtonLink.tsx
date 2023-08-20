@@ -34,12 +34,12 @@ const ButtonLink = ({
     <Link
       {...rest}
       className={clsxMerge(
-        'inline-flex items-center rounded-full font-medium',
+        'inline-flex items-center rounded-full font-medium text-white dark:text-dark',
         'px-3 md:px-4 py-2',
         [
           type === 'filled' && [
-            'bg-primary-700 hover:bg-primary-800 text-white ',
-            'dark:bg-primary-400 dark:text-dark dark:hover:bg-primary-500',
+            'bg-primary-700 hover:bg-primary-800',
+            'dark:bg-primary-400 dark:hover:bg-primary-500',
             'disabled:bg-primary-700',
           ],
           type === 'outlined' && [

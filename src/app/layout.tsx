@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
+    template: `%s - ${siteConfig.title}`,
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
@@ -53,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='dark:bg-dark bg-white dark:text-white'>
+      <body className='dark:bg-dark bg-white'>
         <Navbar />
         <main className='body-width mb-10 mt-12'>{children}</main>
         <Footer />

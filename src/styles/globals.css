@@ -47,9 +47,21 @@
     @apply mx-auto w-full max-w-[70rem];
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  button {
+    @apply dark:text-gray-100 text-gray-900;
+  }
+
   body,
-  p {
-    @apply text-gray-800 dark:text-gray-300;
+  p,
+  ul {
+    @apply text-gray-700 dark:text-gray-300;
   }
 }
 
@@ -61,7 +73,7 @@
 
 /* #region  /**=========== PhotoSwipe =========== */
 .pswp__lightbox-caption {
-  @apply absolute bottom-[12px] pt-3 pb-3 left-1/2 text-sm md:text-base z-10 flex w-11/12 -translate-x-1/2 justify-center rounded-2xl bg-neutral-800/90 px-4 py-2 text-left text-gray-100 sm:text-center lg:w-8/12;
+  @apply absolute bottom-[12px] pt-3 pb-3 left-1/2 text-sm md:text-base z-10 flex w-11/12 -translate-x-1/2 justify-center rounded-2xl bg-neutral-800/90 px-4 py-2 text-left  sm:text-center lg:w-8/12;
 }
 
 .pswp__lightbox-caption a {
@@ -73,7 +85,7 @@
 }
 
 .lightbox-caption-title {
-  @apply min-w-fit font-medium;
+  @apply min-w-fit text-gray-100  text-sm md:text-base;
 }
 
 .lightbox-caption-date {
