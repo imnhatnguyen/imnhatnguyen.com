@@ -42,6 +42,7 @@ const gallery = galleryImages.map((image) => ({
 
 const options = {
   dataSource: gallery,
+  bgOpacity: 0.9,
   padding: { bottom: 120 },
 };
 
