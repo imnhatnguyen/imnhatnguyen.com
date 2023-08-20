@@ -1,9 +1,8 @@
 'use client';
 
+import Tippy from '@tippyjs/react';
 import { useState } from 'react';
 import { FiMail } from 'react-icons/fi';
-
-import clsxMerge from '@/lib/clsxMerge';
 
 import IconButton from '@/components/buttons/IconButton';
 import { UnderlineLinkClassName } from '@/components/links/UnderlineLink';
@@ -30,7 +29,18 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
   }
 
   return (
-    <>
+    <Tippy
+      interactive={true}
+      hideOnClick={false}
+      content={
+        <div className='flex flex-col items-center rounded-3xl bg-white px-5 py-3.5 outline outline-1 outline-gray-200 dark:bg-gray-800 dark:outline-gray-700 md:outline-2'>
+          <p>{copyStatus}</p>
+          <p className='font-medium text-primary-600 dark:text-primary-400'>
+            masonjnguyen@hotmail.com
+          </p>
+        </div>
+      }
+    >
       {type === 'icon' ? (
         <IconButton
           icon={FiMail}
@@ -39,7 +49,7 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
             copyEmailToClipboard();
           }}
         />
-      ) : type === 'underlined' ? (
+      ) : (
         <button
           className={UnderlineLinkClassName}
           onClick={() => {
@@ -48,23 +58,7 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
         >
           Email
         </button>
-      ) : (
-        // type === 'text'
-        <button
-          className={clsxMerge(
-            'inline-flex items-center rounded-full font-medium',
-            'px-3 py-2 md:px-4 md:py-2',
-            'hover:text-primary-600 dark:hover:text-primary-400',
-            'hover:bg-primary-50 dark:hover:bg-primary-400/10',
-          )}
-          onClick={() => {
-            copyEmailToClipboard();
-          }}
-        >
-          <p className='hidden'>{copyStatus}</p>
-          Email
-        </button>
       )}
-    </>
+    </Tippy>
   );
 }
