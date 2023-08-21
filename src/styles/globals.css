@@ -77,7 +77,7 @@
 }
 
 .pswp__lightbox-caption a {
-  @apply underline;
+  @apply text-gray-100 underline;
 }
 
 .lightbox-caption-header {
