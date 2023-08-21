@@ -31,11 +31,10 @@ export default function AboutPage() {
         <h3 className='mt-1 font-medium'>UX Designer</h3>
 
         <p className='mt-3 max-w-4xl'>
-          I am an entry-level UX Designer with some Front-End Development
-          skills. My goal is to create accessible, fast, and visually appealing
-          products that users love to interact with. In my free time, I enjoy
-          singing karaoke, listening to K-pop, eating Vietnamese food, and
-          taking photos.
+          I am on my journey to design and build accessible, fast, secure, and
+          beautiful products that users love to interact with. In my free time,
+          I enjoy singing karaoke, listening to K-pop, eating Vietnamese food,
+          and taking photos.
         </p>
       </section>
 
