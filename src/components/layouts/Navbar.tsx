@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <nav
       className={clsxMerge(
-        'nav-footer-width dark:bg-dark sticky top-0 z-50 flex justify-between space-x-0.5 overflow-x-auto bg-white px-1 py-1.5 min-[480px]:justify-start md:space-x-1',
+        'nav-footer-width sticky top-0 z-50 flex justify-between space-x-0.5 overflow-x-auto bg-white px-1 py-1.5 dark:bg-dark min-[480px]:justify-start md:space-x-1',
         !onTop && 'border-b border-gray-100 dark:border-gray-800',
       )}
     >
@@ -57,7 +57,7 @@ export default function Navbar() {
             className={clsxMerge(
               'py-1.5 md:py-2',
               path !== pathname &&
-                'hover:text-primary-600 hover:dark:text-primary-400 text-gray-800 hover:bg-transparent dark:text-gray-200 dark:hover:bg-transparent',
+                'text-gray-800 hover:bg-transparent hover:text-primary-600 dark:text-gray-200 dark:hover:bg-transparent hover:dark:text-primary-400',
               path === pathname && 'bg-primary-50 dark:bg-primary-400/10',
             )}
           >

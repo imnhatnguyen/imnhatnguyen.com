@@ -58,7 +58,7 @@ export default function CloudImage({
         height={height}
         src={`${baseUrl}${id}=w${width}`}
         alt={alt}
-        className='cursor-pointer mx-auto rounded-2xl'
+        className='mx-auto cursor-pointer rounded-2xl'
         onClick={() => {
           const pswp = new PhotoSwipe(options);
           pswp.init();
