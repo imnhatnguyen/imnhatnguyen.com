@@ -26,7 +26,7 @@ const IconLink = ({
         'inline-flex items-center justify-center rounded-full text-2xl font-medium',
         'min-h-[28px] min-w-[28px] p-2.5 md:min-h-[34px] md:min-w-[34px]',
         'hover:bg-primary-50 dark:hover:bg-primary-400/10',
-        'hover:text-primary-700 dark:hover:text-primary-400',
+        'hover:text-primary-600 dark:hover:text-primary-400',
         className,
       )}
       {...rest}

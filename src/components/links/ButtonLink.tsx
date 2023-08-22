@@ -38,16 +38,16 @@ const ButtonLink = ({
         'px-3 md:px-4 py-2',
         [
           type === 'filled' && [
-            'bg-primary-700 hover:bg-primary-800',
+            'bg-primary-600 hover:bg-primary-700',
             'dark:bg-primary-400 dark:hover:bg-primary-500',
           ],
           type === 'outlined' && [
-            'text-primary-700 dark:text-primary-400',
+            'text-primary-600 dark:text-primary-400',
             'outline outline-1 outline-gray-200  dark:outline-gray-700  md:outline-2',
             'hover:bg-primary-50 dark:hover:bg-primary-400/10',
           ],
           type === 'text' && [
-            'text-primary-700 dark:text-primary-400',
+            'text-primary-600 dark:text-primary-400',
             'hover:bg-primary-50 dark:hover:bg-primary-400/10',
           ],
         ],
