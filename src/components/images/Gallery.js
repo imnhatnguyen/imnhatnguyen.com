@@ -8,6 +8,8 @@ import 'photoswipe/style.css';
 import galleryImages from '@/components/images/galleryImages';
 import PhotoAlbumImage from '@/components/images/PhotoAlbumImage';
 
+// Base URL of my photos on Google Photos
+// See my explanation in the file galleryImages.ts
 const baseUrl = 'https://lh3.googleusercontent.com/pw/';
 const breakpoints = [1920, 1360, 768, 360];
 
@@ -46,6 +48,7 @@ const options = {
   padding: { bottom: 120 },
 };
 
+// https://github.com/dimsemenov/PhotoSwipe/blob/798388691d138ba4e5abdb0b23f8f2cf45911f33/docs/caption.md?plain=1#L22-L49
 const PhotoSwipeConfig = (index) => {
   options.index = index;
   const lightbox = new PhotoSwipe(options);
