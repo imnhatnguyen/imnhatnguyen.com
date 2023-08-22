@@ -53,8 +53,6 @@ export default function CloudImage({
       <Image
         priority={priority}
         width={width}
-        placeholder='blur'
-        blurDataURL={`${baseUrl}${id}=w10`}
         height={height}
         src={`${baseUrl}${id}=w${width}`}
         alt={alt}
