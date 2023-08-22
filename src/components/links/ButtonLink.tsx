@@ -40,7 +40,6 @@ const ButtonLink = ({
           type === 'filled' && [
             'bg-primary-700 hover:bg-primary-800',
             'dark:bg-primary-400 dark:hover:bg-primary-500',
-            'disabled:bg-primary-700',
           ],
           type === 'outlined' && [
             'text-primary-700 dark:text-primary-400',
@@ -52,7 +51,6 @@ const ButtonLink = ({
             'hover:bg-primary-50 dark:hover:bg-primary-400/10',
           ],
         ],
-        'disabled:cursor-not-allowed',
         className,
       )}
     >

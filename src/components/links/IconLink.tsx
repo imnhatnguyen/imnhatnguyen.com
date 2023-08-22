@@ -27,7 +27,6 @@ const IconLink = ({
         'min-h-[28px] min-w-[28px] p-2.5 md:min-h-[34px] md:min-w-[34px]',
         'hover:bg-primary-50 dark:hover:bg-primary-400/10',
         'hover:text-primary-600 dark:hover:text-primary-400',
-        'disabled:cursor-not-allowed',
         className,
       )}
       {...rest}
