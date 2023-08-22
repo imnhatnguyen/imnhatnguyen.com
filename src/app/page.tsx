@@ -21,7 +21,7 @@ export default function HomePage() {
     );
   return (
     <>
-      <section className='mt-32 flex flex-col'>
+      <header className='mt-32 flex flex-col'>
         <h2 className='text-2xl font-semibold md:text-3xl 2xl:text-4xl'>
           Xin chào
         </h2>
@@ -38,23 +38,25 @@ export default function HomePage() {
             About me
           </ButtonLink>
         </div>
-      </section>
-      <section className='mt-36'>
-        <h2 className='text-2xl md:text-3xl'>Featured projects</h2>
-        <div className='mt-5 grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
-          {projects.map((post: Project) => (
-            <ProjectCard key={post.slug} post={post} />
-          ))}
-        </div>
-        <ButtonLink
-          href='/projects'
-          type='text'
-          rightIcon={HiOutlineArrowRight}
-          className='mt-2'
-        >
-          See more projects
-        </ButtonLink>
-      </section>
+      </header>
+      <main>
+        <section className='mt-36'>
+          <h2 className='text-2xl md:text-3xl'>Featured projects</h2>
+          <div className='mt-5 grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
+            {projects.map((post: Project) => (
+              <ProjectCard key={post.slug} post={post} />
+            ))}
+          </div>
+          <ButtonLink
+            href='/projects'
+            type='text'
+            rightIcon={HiOutlineArrowRight}
+            className='mt-2'
+          >
+            See more projects
+          </ButtonLink>
+        </section>
+      </main>
     </>
   );
 }

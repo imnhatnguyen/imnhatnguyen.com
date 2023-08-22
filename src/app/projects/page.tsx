@@ -16,12 +16,14 @@ export default async function ProjectPage() {
 
   return (
     <>
-      <h1 className='mb-7'>Projects</h1>
-      <div className='grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
+      <header>
+        <h1 className='mb-7'>Projects</h1>
+      </header>
+      <main className='grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
         {posts.map((post: Project) => (
           <ProjectCard key={post.slug} post={post} />
         ))}
-      </div>
+      </main>
     </>
   );
 }

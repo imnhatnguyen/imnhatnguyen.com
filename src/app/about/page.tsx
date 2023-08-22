@@ -16,53 +16,54 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section>
+      <header>
         <h1 className='mb-5'>About</h1>
-        <CloudImage
-          priority
-          className='float-right ml-3 md:ml-5 w-24 sm:w-36 md:w-48 md:-translate-y-6 xl:mr-4 lg:-translate-y-12'
-          id='AIL4fc-v6FLfTRklgMVgBUxsHbx1pSWyxPoMuXUdbCpEnjvBjlawZIvFNC7kiriMa24S6G2cQCZhu87Kn7C1Bue71CTWYXGV--Ds0ACJmC24ZDpetGvaXsVl9sC55WJHHotJrV71uHNsKfJjH8_cQmFTC60'
-          width={350}
-          height={350}
-          alt='Photo of Mason'
-          hasCaption={false}
-        />
-        <h2>{siteConfig.title}</h2>
-        <h3 className='mt-1 font-medium'>UX Designer</h3>
+      </header>
+      <main>
+        <section>
+          <CloudImage
+            priority
+            className='float-right ml-3 md:ml-5 w-24 sm:w-36 md:w-48 md:-translate-y-6 xl:mr-4 lg:-translate-y-12'
+            id='AIL4fc-v6FLfTRklgMVgBUxsHbx1pSWyxPoMuXUdbCpEnjvBjlawZIvFNC7kiriMa24S6G2cQCZhu87Kn7C1Bue71CTWYXGV--Ds0ACJmC24ZDpetGvaXsVl9sC55WJHHotJrV71uHNsKfJjH8_cQmFTC60'
+            width={350}
+            height={350}
+            alt='Photo of Mason'
+            hasCaption={false}
+          />
+          <h2>{siteConfig.title}</h2>
+          <h3 className='mt-1 font-medium'>UX Designer</h3>
 
-        <p className='mt-3 max-w-4xl'>
-          I am on my journey to design and build accessible, fast, secure, and
-          beautiful products that users love to interact with. In my free time,
-          I enjoy singing karaoke, listening to K-pop, eating Vietnamese food,
-          and taking photos.
-        </p>
-      </section>
+          <p className='mt-3 max-w-4xl'>
+            I am on my journey to design and build accessible, fast, secure, and
+            beautiful products that users love to interact with. In my free
+            time, I enjoy singing karaoke, listening to K-pop, eating Vietnamese
+            food, and taking photos.
+          </p>
+        </section>
 
-      <section className='max-w-3xl mt-6 space-y-6 md:ml-5'>
-        <Section sections={experience} groupTitle='Experience' />
-        <Section sections={education} groupTitle='Education' />
-        <Section sections={licenses} groupTitle='Licenses and certifications' />
-        <Section sections={technologies} groupTitle='Tools and technologies' />
-        <Section sections={knowledge} groupTitle='Industry knowledge' />
-        <Section sections={honors} groupTitle='Honors and awards' />
-        <Section sections={volunteering} groupTitle='Volunteering' />
-        <Section sections={languages} groupTitle='Languages' />
-      </section>
-      <div className='flex mt-6 -mb-2'>
+        <Section section={experience} title='Experience' />
+        <Section section={education} title='Education' />
+        <Section section={licenses} title='Licenses and certifications' />
+        <Section section={technologies} title='Tools and technologies' />
+        <Section section={knowledge} title='Industry knowledge' />
+        <Section section={honors} title='Honors and awards' />
+        <Section section={volunteering} title='Volunteering' />
+        <Section section={languages} title='Languages' />
+
         <ButtonLink
           href='/pdfs/masonjnguyen_com_resume.pdf'
           type='text'
           leftIcon={HiDownload}
-          className='mx-auto'
+          className='mx-auto mt-6 -mb-2'
         >
           Download resume
         </ButtonLink>
-      </div>
+      </main>
     </>
   );
 }
 
-type SectionType = {
+type GroupType = {
   title?: string;
   org?: string;
   logoId: string;
@@ -71,26 +72,26 @@ type SectionType = {
   id?: string;
 };
 
-type GroupType = {
-  sections: SectionType[];
-  groupTitle: string;
+type SectionType = {
+  section: GroupType[];
+  title: string;
 };
 
-function Section({ sections, groupTitle }: GroupType) {
+function Section({ section, title }: SectionType) {
   return (
-    <div>
-      <h2>{groupTitle}</h2>
+    <section className='max-w-3xl mt-7 md:ml-5'>
+      <h2>{title}</h2>
       <div className='mt-2 space-y-5 md:mt-3'>
-        {sections.map((section: SectionType) => (
-          <div key={section.id} className='ml-3 flex items-start '>
+        {section.map((group: GroupType) => (
+          <div key={group.id} className='ml-3 flex items-start '>
             <div
               className={clsxMerge(
                 'h-full max-h-[40px] w-full max-w-[40px] translate-y-2 sm:max-h-[50px] sm:max-w-[50px] ',
-                section.logoId === 'null' ? 'hidden' : '',
+                group.logoId === 'null' ? 'hidden' : '',
               )}
             >
               <CloudImage
-                id={section.logoId}
+                id={group.logoId}
                 alt='Logo of organization'
                 width={100}
                 height={100}
@@ -99,16 +100,16 @@ function Section({ sections, groupTitle }: GroupType) {
             </div>
             <div className='ml-3.5 space-y-0.5 md:ml-5'>
               <h3 className='text-base font-semibold md:text-lg'>
-                {section.title}
+                {group.title}
               </h3>
-              <h4 className='font-medium'>{section.org}</h4>
-              <p className='text-gray-500 dark:text-gray-400'>{section.date}</p>
-              {section.description}
+              <h4 className='font-medium'>{group.org}</h4>
+              <p className='text-gray-500 dark:text-gray-400'>{group.date}</p>
+              {group.description}
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

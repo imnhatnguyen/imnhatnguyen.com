@@ -93,22 +93,22 @@ export default function Project({ params }: Props) {
           </UnderlineLink>
         </div>
       </header>
-      <div className='mt-10 lg:grid lg:grid-cols-[auto,250px] lg:gap-12'>
-        <MDX content={post.body.code} />
-        <aside className='hidden lg:block'>
-          <div className='sticky top-32'>
+      <main>
+        <div className='mt-10 lg:grid lg:grid-cols-[auto,250px] lg:gap-12'>
+          <MDX content={post.body.code} />
+          <aside className='hidden lg:block sticky top-32 max-h-[calc(100vh-9rem-113px)] overflow-auto'>
             <TOC />
-          </div>
-        </aside>
-      </div>
-      <ButtonLink
-        href='/projects'
-        type='text'
-        leftIcon={HiOutlineArrowLeft}
-        className='mt-5'
-      >
-        Return to all projects
-      </ButtonLink>
+          </aside>
+        </div>
+        <ButtonLink
+          href='/projects'
+          type='text'
+          leftIcon={HiOutlineArrowLeft}
+          className='mt-5'
+        >
+          Return to all projects
+        </ButtonLink>
+      </main>
     </>
   );
 }
