@@ -21,9 +21,9 @@ function createCaption(title, date, description) {
   return `<div>
             <div class="lightbox-caption-header">
               <h2 class="lightbox-caption-title">${title}</h2>
-              <div class="lightbox-caption-date">${date}</div>
+              <span class="lightbox-caption-date">${date}</span>
             </div>
-            <div class="lightbox-caption-description">${description}</div>
+            <p class="lightbox-caption-description">${description}</p>
           </div>`;
 }
 

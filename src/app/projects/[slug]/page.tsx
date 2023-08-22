@@ -85,18 +85,18 @@ export default function Project({ params }: Props) {
         <h1 className='mt-5 text-xl md:text-3xl'>
           <Balancer>{post.title}</Balancer>
         </h1>
-        <div className='flex flex-wrap mt-3 gap-4 md:gap-8'>
+        <section className='mt-3 flex flex-wrap gap-4 md:gap-8'>
           <p>{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p>
           <p>{post.category}</p>
           <UnderlineLink href={post.link}>
             {post.link?.substring(8, post.link.length)}
           </UnderlineLink>
-        </div>
+        </section>
       </header>
       <main>
         <div className='mt-10 lg:grid lg:grid-cols-[auto,250px] lg:gap-12'>
           <MDX content={post.body.code} />
-          <aside className='hidden lg:block sticky top-32 max-h-[calc(100vh-9rem-113px)] overflow-auto'>
+          <aside className='sticky top-32 hidden max-h-[calc(100vh-9rem-113px)] overflow-auto lg:block'>
             <TOC />
           </aside>
         </div>

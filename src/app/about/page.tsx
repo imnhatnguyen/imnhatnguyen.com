@@ -23,7 +23,7 @@ export default function AboutPage() {
         <section>
           <CloudImage
             priority
-            className='float-right ml-3 md:ml-5 w-24 sm:w-36 md:w-48 md:-translate-y-6 xl:mr-4 lg:-translate-y-12'
+            className='float-right ml-3 w-24 sm:w-36 md:ml-5 md:w-48 md:-translate-y-6 lg:-translate-y-12 xl:mr-4'
             id='AIL4fc-v6FLfTRklgMVgBUxsHbx1pSWyxPoMuXUdbCpEnjvBjlawZIvFNC7kiriMa24S6G2cQCZhu87Kn7C1Bue71CTWYXGV--Ds0ACJmC24ZDpetGvaXsVl9sC55WJHHotJrV71uHNsKfJjH8_cQmFTC60'
             width={350}
             height={350}
@@ -48,7 +48,7 @@ export default function AboutPage() {
         <Section section={honors} title='Honors and awards' />
         <Section section={volunteering} title='Volunteering' />
         <Section section={languages} title='Languages' />
-        <div className='flex mt-6 -mb-2'>
+        <div className='-mb-2 mt-6 flex'>
           <ButtonLink
             href='/pdfs/masonjnguyen_com_resume.pdf'
             type='text'
@@ -79,14 +79,14 @@ type SectionType = {
 
 function Section({ section, title }: SectionType) {
   return (
-    <section className='max-w-3xl mt-7 md:ml-5'>
+    <section className='mt-8 max-w-3xl md:ml-5'>
       <h2>{title}</h2>
       <div className='mt-2 space-y-5 md:mt-3'>
         {section.map((group: GroupType) => (
           <div key={group.id} className='ml-3 flex items-start'>
-            <div
+            <picture
               className={clsxMerge(
-                'h-full max-h-[40px] w-full max-w-[40px] translate-y-2 sm:max-h-[50px] sm:max-w-[50px] ',
+                'h-full max-h-[40px] w-full max-w-[40px] translate-y-2 sm:max-h-[50px] sm:max-w-[50px]',
                 group.logoId === 'null' ? 'hidden' : '',
               )}
             >
@@ -97,15 +97,15 @@ function Section({ section, title }: SectionType) {
                 height={100}
                 hasCaption={false}
               />
-            </div>
-            <div className='ml-3.5 space-y-0.5 md:ml-5'>
+            </picture>
+            <section className='ml-3.5 space-y-0.5 md:ml-5'>
               <h3 className='text-base font-semibold md:text-lg'>
                 {group.title}
               </h3>
               <h4 className='font-medium'>{group.org}</h4>
               <p className='text-gray-500 dark:text-gray-400'>{group.date}</p>
               {group.description}
-            </div>
+            </section>
           </div>
         ))}
       </div>

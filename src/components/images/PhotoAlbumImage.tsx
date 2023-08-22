@@ -11,7 +11,7 @@ export default function PhotoAlbumImage({
   wrapperStyle,
 }: RenderPhotoProps) {
   return (
-    <div
+    <picture
       style={{
         ...wrapperStyle,
         position: 'relative',
@@ -26,6 +26,6 @@ export default function PhotoAlbumImage({
         className={clsxMerge('rounded-2xl', className)}
         {...{ alt, title, sizes, onClick }}
       />
-    </div>
+    </picture>
   );
 }

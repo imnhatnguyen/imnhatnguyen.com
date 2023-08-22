@@ -35,7 +35,7 @@ const ButtonLink = ({
       {...rest}
       className={clsxMerge(
         'inline-flex items-center rounded-full font-medium text-white dark:text-dark',
-        'px-3 md:px-4 py-2',
+        'px-3 py-2 md:px-4',
         [
           type === 'filled' && [
             'bg-primary-600 hover:bg-primary-700',
@@ -55,15 +55,11 @@ const ButtonLink = ({
       )}
     >
       {LeftIcon && (
-        <div className='mr-2'>
-          <LeftIcon className={clsxMerge('h-5 w-5', leftIconClassName)} />
-        </div>
+        <LeftIcon className={clsxMerge('mr-2 h-5 w-5', leftIconClassName)} />
       )}
       {children}
       {RightIcon && (
-        <div className='ml-2'>
-          <RightIcon className={clsxMerge('h-5 w-5', rightIconClassName)} />
-        </div>
+        <RightIcon className={clsxMerge('ml-2 h-5 w-5', rightIconClassName)} />
       )}
     </Link>
   );

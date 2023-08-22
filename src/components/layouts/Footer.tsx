@@ -6,7 +6,7 @@ import IconLink from '@/components/links/IconLink';
 import { siteConfig } from '@/constant/config';
 export default function Footer() {
   return (
-    <footer className='nav-footer-width flex flex-col items-center space-y-3.5 border-t border-gray-100 pt-7 pb-10 dark:border-gray-800'>
+    <footer className='nav-footer-width flex flex-col items-center space-y-3.5 border-t border-gray-100 pb-10 pt-7 dark:border-gray-800'>
       <SocialLinks />
       <p>
         © {new Date().getFullYear()} {siteConfig.title}
@@ -17,7 +17,7 @@ export default function Footer() {
 
 function SocialLinks() {
   return (
-    <div className='flex space-x-4'>
+    <section className='flex space-x-4'>
       <EmailButton type='icon' />
       {socials.map((social) => (
         <IconLink
@@ -27,7 +27,7 @@ function SocialLinks() {
           icon={social.icon}
         />
       ))}
-    </div>
+    </section>
   );
 }
 
