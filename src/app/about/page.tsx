@@ -40,7 +40,6 @@ export default function AboutPage() {
             food, and taking photos.
           </p>
         </section>
-
         <Section section={experience} title='Experience' />
         <Section section={education} title='Education' />
         <Section section={licenses} title='Licenses and certifications' />
@@ -49,15 +48,16 @@ export default function AboutPage() {
         <Section section={honors} title='Honors and awards' />
         <Section section={volunteering} title='Volunteering' />
         <Section section={languages} title='Languages' />
-
-        <ButtonLink
-          href='/pdfs/masonjnguyen_com_resume.pdf'
-          type='text'
-          leftIcon={HiDownload}
-          className='mx-auto mt-6 -mb-2'
-        >
-          Download resume
-        </ButtonLink>
+        <div className='flex mt-6 -mb-2'>
+          <ButtonLink
+            href='/pdfs/masonjnguyen_com_resume.pdf'
+            type='text'
+            leftIcon={HiDownload}
+            className='mx-auto'
+          >
+            Download resume
+          </ButtonLink>
+        </div>
       </main>
     </>
   );
@@ -83,7 +83,7 @@ function Section({ section, title }: SectionType) {
       <h2>{title}</h2>
       <div className='mt-2 space-y-5 md:mt-3'>
         {section.map((group: GroupType) => (
-          <div key={group.id} className='ml-3 flex items-start '>
+          <div key={group.id} className='ml-3 flex items-start'>
             <div
               className={clsxMerge(
                 'h-full max-h-[40px] w-full max-w-[40px] translate-y-2 sm:max-h-[50px] sm:max-w-[50px] ',
