@@ -21,8 +21,6 @@ export default function PhotoAlbumImage({
         priority
         fill
         src={photo.src}
-        placeholder='blur'
-        blurDataURL={`${photo.src}=w10`}
         className={clsxMerge('rounded-2xl', className)}
         {...{ alt, title, sizes, onClick }}
       />
