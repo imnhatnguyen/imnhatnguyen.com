@@ -51,7 +51,7 @@ export default function HomePage() {
             href='/projects'
             type='text'
             rightIcon={HiOutlineArrowRight}
-            className='mt-2'
+            className='mt-4'
           >
             See more projects
           </ButtonLink>
