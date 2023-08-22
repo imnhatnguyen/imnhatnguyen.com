@@ -1,6 +1,7 @@
 export const siteConfig = {
   title: 'Mason Nguyen',
-  description: 'Android Developer • UX Designer',
+  description:
+    'Design and build accessible, fast, secure and beautiful products',
 
   url: 'https://masonjnguyen.com',
 };

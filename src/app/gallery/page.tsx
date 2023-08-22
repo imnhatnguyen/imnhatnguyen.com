@@ -10,9 +10,13 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <section>
-      <h1 className='mb-7'>Gallery</h1>
-      <Gallery />
-    </section>
+    <>
+      <header>
+        <h1 className='mb-7'>Gallery</h1>
+      </header>
+      <main>
+        <Gallery />
+      </main>
+    </>
   );
 }

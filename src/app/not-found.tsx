@@ -12,9 +12,11 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className='max-w-3xl mx-auto'>
-      <h1 className='mb-7'>Sorry 😢</h1>
-      <div className='mt-3 items-center flex flex-col md:mt-5'>
+    <>
+      <header className='max-w-3xl'>
+        <h1 className='mb-7'>Sorry 😔</h1>
+      </header>
+      <main className='max-w-3xl mx-auto mt-3 items-center flex flex-col md:mt-5'>
         <div>
           The content you're looking for might have been deleted or moved to
           another location. Alternatively, the link you've clicked on may be
@@ -36,7 +38,7 @@ export default function NotFound() {
         >
           Return to the Home page
         </ButtonLink>
-      </div>
-    </div>
+      </main>
+    </>
   );
 }
