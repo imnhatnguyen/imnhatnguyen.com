@@ -17,7 +17,7 @@ interface MDXProps {
 export function MDX({ content }: MDXProps) {
   const Component = useMDXComponent(content);
   return (
-    <div
+    <article
       className={clsxMerge(
         'toc-content prose prose-stone dark:prose-invert max-w-4xl',
         'prose-h2:text-xl prose-h2:font-semibold prose-h2:md:text-2xl',
@@ -25,6 +25,6 @@ export function MDX({ content }: MDXProps) {
       )}
     >
       <Component components={{ ...components }} />
-    </div>
+    </article>
   );
 }
