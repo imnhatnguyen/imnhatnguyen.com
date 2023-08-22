@@ -46,6 +46,25 @@ const options = {
   padding: { bottom: 120 },
 };
 
+const PhotoSwipeConfig = (index) => {
+  options.index = index;
+  const lightbox = new PhotoSwipe(options);
+  lightbox.on('uiRegister', function () {
+    lightbox.ui.registerElement({
+      name: 'lightbox-caption',
+      order: 9,
+      isButton: false,
+      appendTo: 'root',
+      onInit: (el) => {
+        lightbox.on('change', () => {
+          el.innerHTML = lightbox.currSlide.data.caption || '';
+        });
+      },
+    });
+  });
+  lightbox.init();
+};
+
 export default function Gallery() {
   return (
     <PhotoAlbum
@@ -55,22 +74,7 @@ export default function Gallery() {
       padding={0}
       spacing={10}
       onClick={({ index }) => {
-        options.index = index;
-        const lightbox = new PhotoSwipe(options);
-        lightbox.on('uiRegister', function () {
-          lightbox.ui.registerElement({
-            name: 'lightbox-caption',
-            order: 9,
-            isButton: false,
-            appendTo: 'root',
-            onInit: (el) => {
-              lightbox.on('change', () => {
-                el.innerHTML = lightbox.currSlide.data.caption || '';
-              });
-            },
-          });
-        });
-        lightbox.init();
+        PhotoSwipeConfig(index);
       }}
       renderPhoto={PhotoAlbumImage}
     />
