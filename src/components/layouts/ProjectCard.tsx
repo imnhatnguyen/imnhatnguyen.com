@@ -15,7 +15,7 @@ export default function ProjectCard({ post }: ProjectCardProp) {
   return (
     <Link href={`/projects/${post.slug}`} className='group'>
       <CloudImage
-        className='rounded-2xl pointer-events-none group-hover:ring dark:group-hover:ring-primary-400 group-hover:ring-primary-500'
+        className='pointer-events-none rounded-2xl group-hover:ring group-hover:ring-primary-500 dark:group-hover:ring-primary-400'
         id={post.image}
         alt={post.title}
         width={550}
@@ -23,7 +23,7 @@ export default function ProjectCard({ post }: ProjectCardProp) {
         hasCaption={false}
         priority
       />
-      <div className='px-2 pt-4 space-y-0.5'>
+      <div className='space-y-0.5 px-2 pt-4'>
         <h2>
           <Balancer className='text-base font-semibold'>{post.title}</Balancer>
         </h2>

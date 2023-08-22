@@ -19,7 +19,7 @@ export default function TOC() {
   return (
     <>
       <h2 className='text-lg font-medium'>On this page</h2>
-      <div className='mt-4 toc prose prose-stone dark:prose-invert'></div>
+      <div className='toc prose prose-stone mt-4 dark:prose-invert'></div>
     </>
   );
 }

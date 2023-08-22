@@ -21,9 +21,9 @@ function createCaption(title, date, description) {
   return `<div>
             <div class="lightbox-caption-header">
               <h2 class="lightbox-caption-title">${title}</h2>
-              <div class="lightbox-caption-date">${date}</div>
+              <span class="lightbox-caption-date">${date}</span>
             </div>
-            <div class="lightbox-caption-description">${description}</div>
+            <p class="lightbox-caption-description">${description}</p>
           </div>`;
 }
 
@@ -46,6 +46,25 @@ const options = {
   padding: { bottom: 120 },
 };
 
+const PhotoSwipeConfig = (index) => {
+  options.index = index;
+  const lightbox = new PhotoSwipe(options);
+  lightbox.on('uiRegister', function () {
+    lightbox.ui.registerElement({
+      name: 'lightbox-caption',
+      order: 9,
+      isButton: false,
+      appendTo: 'root',
+      onInit: (el) => {
+        lightbox.on('change', () => {
+          el.innerHTML = lightbox.currSlide.data.caption || '';
+        });
+      },
+    });
+  });
+  lightbox.init();
+};
+
 export default function Gallery() {
   return (
     <PhotoAlbum
@@ -55,22 +74,7 @@ export default function Gallery() {
       padding={0}
       spacing={10}
       onClick={({ index }) => {
-        options.index = index;
-        const lightbox = new PhotoSwipe(options);
-        lightbox.on('uiRegister', function () {
-          lightbox.ui.registerElement({
-            name: 'lightbox-caption',
-            order: 9,
-            isButton: false,
-            appendTo: 'root',
-            onInit: (el) => {
-              lightbox.on('change', () => {
-                el.innerHTML = lightbox.currSlide.data.caption || '';
-              });
-            },
-          });
-        });
-        lightbox.init();
+        PhotoSwipeConfig(index);
       }}
       renderPhoto={PhotoAlbumImage}
     />

@@ -19,7 +19,7 @@ export function MDX({ content }: MDXProps) {
   return (
     <article
       className={clsxMerge(
-        'toc-content prose prose-stone dark:prose-invert max-w-4xl',
+        'toc-content prose prose-stone max-w-4xl dark:prose-invert',
         'prose-h2:text-xl prose-h2:font-semibold prose-h2:md:text-2xl',
         'prose-h3:text-lg prose-h3:md:text-xl',
       )}
