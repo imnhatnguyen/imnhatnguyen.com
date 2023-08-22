@@ -57,7 +57,7 @@ export default function Navbar() {
             className={clsxMerge(
               'py-1.5 md:py-2',
               path !== pathname &&
-                'hover:text-primary-600 hover:dark:text-primary-400 text-gray-800 hover:bg-transparent dark:text-gray-200 dark:hover:bg-transparent',
+                'hover:text-primary-700 hover:dark:text-primary-400 text-gray-800 hover:bg-transparent dark:text-gray-200 dark:hover:bg-transparent',
               path === pathname && 'bg-primary-50  dark:bg-primary-400/10',
             )}
           >
