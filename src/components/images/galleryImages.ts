@@ -1,3 +1,10 @@
+// HOW TO GET THESE IDs FOR YOUR IMAGES?
+// 1. Upload all of your images to an album on Google Photos.
+// 2. Share the album.
+// 3. In the shared album, open each image and right-click on them to get their URLs.
+// 4. From the URL that you just got, remove the base URL part, which looks like https://lh3.googleusercontent.com/pw/
+// 5. Then remove the parameters at the end of the URL, which look like =w1234 and =h123.
+
 const galleryImages = [
   {
     id: 'AIL4fc9rxMkdBX4USQxhhz2pmUbBaIwx6J-P6UhxcpSxhCRhRxb7GvahcyET7c9H1gw-BLoA23odPdQlf1yf4BVZErmBoNngdDgqocHmP1CMGjS7ZGVq_C8_rMLnCS6AttpqD8Z-CE3be5t4OXzAS-xCyCI',

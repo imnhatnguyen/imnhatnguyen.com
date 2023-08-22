@@ -26,6 +26,8 @@ export default function CloudImage({
   hasCaption = true,
   priority = false,
 }: CloudImageType) {
+  //  Base URL of my photos on Google Photos
+  //  See my explanation in the file galleryImages.ts
   const baseUrl = 'https://lh3.googleusercontent.com/pw/';
   const breakpoints = [1920, 1360, 768, 360];
 
