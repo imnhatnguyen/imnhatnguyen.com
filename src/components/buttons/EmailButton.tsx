@@ -33,7 +33,7 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
       interactive={true}
       hideOnClick={false}
       content={
-        <div className='flex flex-col items-center rounded-3xl bg-white px-5 py-3.5 outline outline-1 outline-gray-200 dark:bg-gray-800 dark:outline-gray-700 md:outline-2'>
+        <div className='z-10 flex flex-col items-center rounded-3xl bg-white px-5 py-3.5 outline outline-1 outline-gray-200 dark:bg-dark dark:outline-gray-700 md:outline-2'>
           <p>{copyStatus}</p>
           <p className='font-medium text-primary-600 dark:text-primary-400'>
             masonjnguyen@hotmail.com
