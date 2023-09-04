@@ -19,7 +19,7 @@
     "date-fns": "^2.30.0",
     "next": "^13.4.19",
     "next-contentlayer": "^0.3.4",
-    "photoswipe": "^5.3.8",
+    "photoswipe": "^5.3.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
