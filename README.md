@@ -1,5 +1,7 @@
 # masonjnguyen.com
 
+<img src="public/images/og.png" width="750"/>
+
 ## Running locally
 
 ```bash
@@ -11,7 +13,12 @@ yarn dev
 
 ## Acknowledgement
 
-This repo was developed based on these amazing works:
+This repository was developed based on the amazing work of the these authors:
 
-- [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter), [theodorusclarence.com](https://github.com/theodorusclarence/theodorusclarence.com) by **Theodorus Clarence**
-- [leerob.io](tps://github.com/leerob/leerob.io) by **Lee Robinson**
+- Theodorus Clarence
+
+  - [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter) provided me with a convenient development environment.
+  - [theodorusclarence.com](https://github.com/theodorusclarence/theodorusclarence.com) gave me a beautiful UI baseline
+
+- Lee Robinson
+  - [leerob.io](https://github.com/leerob/leerob.io) guided me how to use Contentlayer.
