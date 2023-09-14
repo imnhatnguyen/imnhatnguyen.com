@@ -27,7 +27,7 @@ export default function HomePage() {
         </h2>
         <h1 className='-ml-0.5 mt-5 text-4xl md:text-5xl'>My name is Mason</h1>
         <p className='mt-6 max-w-4xl text-lg text-gray-900 dark:text-gray-100'>
-          I am on my journey to design and build accessible, fast, secure, and
+          I'm on my journey to design and build accessible, fast, secure, and
           beautiful products
         </p>
         <section className='mt-6 space-x-4'>
