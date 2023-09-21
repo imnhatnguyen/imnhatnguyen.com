@@ -38,8 +38,8 @@ export default function AboutPage() {
           <p className='mt-3 max-w-4xl'>
             I'm on my journey to design and build accessible, fast, secure, and
             beautiful products that users love to interact with. In my free
-            time, I enjoy singing karaoke, listening to K-pop, eating Vietnamese
-            food, and taking photos.
+            time, I enjoy singing karaoke, eating Vietnamese food, and taking
+            photos.
           </p>
         </section>
         <Section section={experience} title='Experience' />
