@@ -219,8 +219,8 @@ const volunteering = [
     date: 'Jan 2017 - Feb 2017',
     description: (
       <p>
-        Helped a team that creates handmade products successfully raise enough
-        money for charity
+        Helped lead a team that created handmade products to successfully raise
+        enough money for charity
       </p>
     ),
   },
