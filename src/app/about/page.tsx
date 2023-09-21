@@ -35,11 +35,11 @@ export default function AboutPage() {
           <h2>{siteConfig.title}</h2>
           <h3 className='mt-1 font-medium'>UX Designer</h3>
 
-          <p className='mt-3 max-w-4xl'>
+          <p className='mt-3'>
             I'm on my journey to design and build accessible, fast, secure, and
             beautiful products that users love to interact with. In my free
-            time, I enjoy singing karaoke, listening to K-pop, eating Vietnamese
-            food, and taking photos.
+            time, I enjoy singing karaoke, eating Vietnamese food, and taking
+            photos.
           </p>
         </section>
         <Section section={experience} title='Experience' />
@@ -81,7 +81,7 @@ type SectionType = {
 
 function Section({ section, title }: SectionType) {
   return (
-    <section className='mt-8 max-w-3xl md:ml-5'>
+    <section className='mt-8 max-w-4xl md:ml-5'>
       <h2>{title}</h2>
       <div className='mt-2 space-y-5 md:mt-3'>
         {section.map((group: GroupType) => (
@@ -219,8 +219,8 @@ const volunteering = [
     date: 'Jan 2017 - Feb 2017',
     description: (
       <p>
-        Helped a team that creates handmade products successfully raise enough
-        money for charity
+        Helped lead a team that created handmade products to successfully raise
+        enough money for charity
       </p>
     ),
   },
