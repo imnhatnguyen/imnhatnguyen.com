@@ -33,7 +33,7 @@ export default function AboutPage() {
             hasCaption={false}
           />
           <h2>{siteConfig.title}</h2>
-          <h3 className='mt-1 font-medium'>UX Designer</h3>
+          <h3 className='mt-1 font-medium'>Developer</h3>
 
           <p className='mt-3'>
             I'm on my journey to design and build accessible, fast, secure, and
