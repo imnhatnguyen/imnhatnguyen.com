@@ -20,13 +20,13 @@ export default function NotFound() {
         <div>
           The content you're looking for might have been deleted or moved to
           another location. Alternatively, the link you've clicked on may be
-          invalid. If you need help, please contact me through{' '}
+          invalid. If you need help, please contact me via{' '}
           <EmailButton type='underlined' /> or{' '}
           <UnderlineLink
-            href='https://twitter.com/masonjnguyen'
+            href='https://x.com/masonjnguyen'
             className='font-normal'
           >
-            Twitter DM
+            X
           </UnderlineLink>
           .
         </div>
