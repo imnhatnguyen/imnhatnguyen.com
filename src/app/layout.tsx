@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 
 import '@/styles/globals.css';
@@ -56,6 +57,7 @@ export default function RootLayout({
       <body className='bg-white dark:bg-dark'>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
