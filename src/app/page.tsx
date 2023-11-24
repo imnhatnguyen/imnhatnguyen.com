@@ -42,7 +42,7 @@ export default function HomePage() {
       <main>
         <section className='mt-36'>
           <h2 className='text-2xl md:text-3xl'>Featured projects</h2>
-          <div className='mt-5 grid gap-6 sm:grid-cols-2 sm:gap-y-14 xl:grid-cols-3'>
+          <div className='mt-5 grid gap-6 gap-y-12 sm:grid-cols-2 xl:grid-cols-3'>
             {projects.map((post: Project) => (
               <ProjectCard key={post.slug} post={post} />
             ))}
