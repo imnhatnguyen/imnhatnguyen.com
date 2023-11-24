@@ -19,14 +19,14 @@ export default function NotFound() {
       <main className='mx-auto mt-3 flex max-w-3xl flex-col items-center md:mt-5'>
         <div>
           The content you're looking for might have been deleted or moved to
-          another location. Alternatively, the link you've clicked on may be
-          invalid. If you need help, please contact me through{' '}
+          another location. On the other hand, the link you've clicked on may be
+          invalid. If you need help, please contact me via{' '}
           <EmailButton type='underlined' /> or{' '}
           <UnderlineLink
-            href='https://twitter.com/masonjnguyen'
+            href='https://x.com/masonjnguyen'
             className='font-normal'
           >
-            Twitter DM
+            X
           </UnderlineLink>
           .
         </div>

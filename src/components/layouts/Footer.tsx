@@ -1,4 +1,4 @@
-import { SiBehance, SiGithub, SiLinkedin, SiTwitter } from 'react-icons/si';
+import { SiGithub, SiLinkedin, SiX } from 'react-icons/si';
 
 import { EmailButton } from '@/components/buttons/EmailButton';
 import IconLink from '@/components/links/IconLink';
@@ -33,22 +33,17 @@ function SocialLinks() {
 
 const socials = [
   {
-    href: 'https://www.twitter.com/masonjnguyen',
-    icon: SiTwitter,
-    id: 'Twitter',
+    href: 'https://x.com/masonjnguyen',
+    icon: SiX,
+    id: 'X',
   },
   {
-    href: 'https://www.behance.net/masonjnguyen',
-    icon: SiBehance,
-    id: 'Behance',
-  },
-  {
-    href: 'https://www.github.com/masonjnguyen',
+    href: 'https://github.com/masonjnguyen',
     icon: SiGithub,
     id: 'Github',
   },
   {
-    href: 'https://www.linkedin.com/in/masonjnguyen',
+    href: 'https://linkedin.com/in/masonjnguyen',
     icon: SiLinkedin,
     id: 'Linkedin',
   },
