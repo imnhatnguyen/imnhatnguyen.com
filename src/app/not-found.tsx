@@ -4,7 +4,6 @@ import { HiOutlineArrowLeft } from 'react-icons/hi';
 
 import { EmailButton } from '@/components/buttons/EmailButton';
 import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
 
 export const metadata: Metadata = {
   title: 'Not Found',
@@ -21,14 +20,7 @@ export default function NotFound() {
           The content you're looking for might have been deleted or moved to
           another location. On the other hand, the link you've clicked on may be
           invalid. If you need help, please contact me via{' '}
-          <EmailButton type='underlined' /> or{' '}
-          <UnderlineLink
-            href='https://x.com/masonjnguyen'
-            className='font-normal'
-          >
-            X
-          </UnderlineLink>
-          .
+          <EmailButton type='underlined' />.
         </div>
         <ButtonLink
           href='/'

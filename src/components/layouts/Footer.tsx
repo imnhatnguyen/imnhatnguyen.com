@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiX } from 'react-icons/si';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 import { EmailButton } from '@/components/buttons/EmailButton';
 import IconLink from '@/components/links/IconLink';
@@ -33,18 +33,13 @@ function SocialLinks() {
 
 const socials = [
   {
-    href: 'https://x.com/masonjnguyen',
-    icon: SiX,
-    id: 'X',
+    href: 'https://linkedin.com/in/masonjnguyen',
+    icon: SiLinkedin,
+    id: 'Linkedin',
   },
   {
     href: 'https://github.com/masonjnguyen',
     icon: SiGithub,
     id: 'Github',
-  },
-  {
-    href: 'https://linkedin.com/in/masonjnguyen',
-    icon: SiLinkedin,
-    id: 'Linkedin',
   },
 ];
