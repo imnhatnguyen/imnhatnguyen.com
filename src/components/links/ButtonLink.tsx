@@ -43,7 +43,7 @@ const ButtonLink = ({
           ],
           type === 'outlined' && [
             'text-primary-600 dark:text-primary-400',
-            'outline outline-1 outline-gray-200  dark:outline-gray-700  md:outline-2',
+            'outline outline-1 outline-gray-200  md:outline-2  dark:outline-gray-700',
             'hover:bg-primary-50 dark:hover:bg-primary-400/10',
           ],
           type === 'text' && [

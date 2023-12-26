@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <nav
       className={clsxMerge(
-        'nav-footer-width sticky top-0 z-50 flex justify-between space-x-0.5 overflow-x-auto bg-white px-1 py-1.5 dark:bg-dark min-[480px]:justify-start md:space-x-1',
+        'nav-footer-width sticky top-0 z-50 flex justify-between space-x-0.5 overflow-x-auto bg-white px-1 py-1.5 min-[480px]:justify-start md:space-x-1 dark:bg-dark',
         !onTop && 'border-b border-gray-100 dark:border-gray-800',
       )}
     >
