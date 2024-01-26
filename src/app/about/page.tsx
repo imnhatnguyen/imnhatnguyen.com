@@ -218,10 +218,14 @@ const volunteering = [
       'AIL4fc8PxMMl332SU3UUxcRp5oG4zl00K7ZRB90Oq217HIZBba4_VYZYViNrBItKeKTbehTvj4BeWiPP-DYaRXTekMREdhSdcRKomMAYK20pUEdjSOQ4eNX8n3DkjqELEhrEqfyHgC_S8mwfV5nl9lTgmlo',
     date: 'Jan 2017 - Feb 2017',
     description: (
-      <p>
+      <div>
         Helped lead a team that created handmade products to successfully raise
-        enough money for charity
-      </p>
+        enough money for charity:
+        <ul>
+          <li>・ Took photos for the final products</li>
+          <li>・ Managed the team when the leader was busy </li>
+        </ul>
+      </div>
     ),
   },
 ];
