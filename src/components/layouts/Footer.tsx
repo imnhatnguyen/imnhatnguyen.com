@@ -35,7 +35,7 @@ const socials = [
   {
     href: 'https://linkedin.com/in/masonjnguyen',
     icon: SiLinkedin,
-    id: 'Linkedin',
+    id: 'LinkedIn',
   },
   {
     href: 'https://behance.net/masonjnguyen',
@@ -45,6 +45,6 @@ const socials = [
   {
     href: 'https://github.com/masonjnguyen',
     icon: SiGithub,
-    id: 'Github',
+    id: 'GitHub',
   },
 ];
