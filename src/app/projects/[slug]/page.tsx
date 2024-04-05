@@ -1,4 +1,4 @@
-import { allProjects, Project } from 'contentlayer/generated';
+import { allProjects, type Project } from 'contentlayer/generated';
 import { format, parseISO } from 'date-fns';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
