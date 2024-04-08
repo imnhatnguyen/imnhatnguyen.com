@@ -29,7 +29,7 @@ export default function AboutPage() {
             // See my explanation in file galleryImages.ts
             width={350}
             height={350}
-            alt='Photo of Mason'
+            alt='Photo of Nhat'
             hasCaption={false}
           />
           <h2>{siteConfig.title}</h2>
@@ -52,7 +52,7 @@ export default function AboutPage() {
         <Section section={languages} title='Languages' />
         <div className='-mb-2 mt-6 flex'>
           <ButtonLink
-            href='/pdfs/masonjnguyen_com_resume.pdf'
+            href='/pdfs/imnhatnguyen_com_resume.pdf'
             type='text'
             leftIcon={HiDownload}
             className='mx-auto'

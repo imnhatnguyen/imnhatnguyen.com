@@ -5,7 +5,7 @@ import Gallery from '@/components/images/Gallery';
 export const metadata: Metadata = {
   title: 'Gallery',
   description:
-    'A gallery where Mason showcases his photos, illustrations or maybe some random sketches',
+    'A gallery where Nhat showcases his photos, illustrations or maybe some random sketches',
 };
 
 export default function GalleryPage() {
