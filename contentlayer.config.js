@@ -20,12 +20,12 @@ const computedFields = {
       dateModified: doc.publishedAt,
       description: doc.summary,
       image: doc.image
-        ? `https://masonjnguyen.com${doc.image}`
-        : `https://masonjnguyen.com/og?title=${doc.title}`,
-      url: `https://masonjnguyen.com/projects/${doc._raw.flattenedPath}`,
+        ? `https://imnhatnguyen.com${doc.image}`
+        : `https://imnhatnguyen.com/og?title=${doc.title}`,
+      url: `https://imnhatnguyen.com/projects/${doc._raw.flattenedPath}`,
       author: {
         '@type': 'Person',
-        name: 'Mason Nguyen',
+        name: 'Nhat Nguyen',
       },
     }),
   },

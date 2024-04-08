@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    host: 'https://masonjnguyen.com',
-    sitemap: 'https://masonjnguyen.com/sitemap.xml',
+    host: 'https://imnhatnguyen.com',
+    sitemap: 'https://imnhatnguyen.com/sitemap.xml',
   };
 }
