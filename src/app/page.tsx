@@ -32,7 +32,7 @@ export default function HomePage() {
             Top project
           </ButtonLink>
           <ButtonLink href='/about' type='outlined'>
-            About me
+            My profile
           </ButtonLink>
         </section>
       </header>
