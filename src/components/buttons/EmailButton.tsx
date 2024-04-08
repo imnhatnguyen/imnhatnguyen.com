@@ -21,7 +21,7 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
   const [copyStatus, setCopyStatus] = useState('Click to copy');
 
   function copyEmailToClipboard() {
-    navigator.clipboard.writeText('masonjnguyen@hotmail.com');
+    navigator.clipboard.writeText('contact@imnhatnguyen.com');
     setCopyStatus('Copied to clipboard ');
     setTimeout(() => {
       setCopyStatus('Click to copy');
@@ -36,7 +36,7 @@ export function EmailButton({ type = 'icon' }: EmailButtonProps) {
         <div className='z-10 flex flex-col items-center rounded-3xl bg-white px-5 py-3.5 outline outline-1 outline-gray-200 md:outline-2 dark:bg-dark dark:outline-gray-700'>
           <p>{copyStatus}</p>
           <p className='font-medium text-primary-600 dark:text-primary-400'>
-            masonjnguyen@hotmail.com
+            contact@imnhatnguyen.com
           </p>
         </div>
       }
