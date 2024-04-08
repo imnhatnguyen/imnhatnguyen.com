@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.png`],
-    creator: '@masonjnguyen',
+    creator: '@imnhatnguyen',
   },
   authors: [
     {

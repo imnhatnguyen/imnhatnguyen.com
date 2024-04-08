@@ -42,7 +42,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://masonjnguyen.com/projects/${slug}`,
+      url: `https://imnhatnguyen.com/projects/${slug}`,
       images: [
         {
           url: ogImage,

@@ -33,17 +33,17 @@ function SocialLinks() {
 
 const socials = [
   {
-    href: 'https://linkedin.com/in/masonjnguyen',
+    href: 'https://linkedin.com/in/imnhatnguyen',
     icon: SiLinkedin,
     id: 'LinkedIn',
   },
   {
-    href: 'https://behance.net/masonjnguyen',
+    href: 'https://behance.net/imnhatnguyen',
     icon: SiBehance,
     id: 'Behance',
   },
   {
-    href: 'https://github.com/masonjnguyen',
+    href: 'https://github.com/imnhatnguyen',
     icon: SiGithub,
     id: 'GitHub',
   },

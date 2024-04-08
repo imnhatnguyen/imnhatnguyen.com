@@ -1,12 +1,12 @@
-# masonjnguyen.com
+# imnhatnguyen.com
 
 <img src="public/images/og.png" width="750"/>
 
 ## Running locally
 
 ```bash
-git clone https://github.com/masonjnguyen/masonjnguyen.com.git
-cd masonjnguyen.com
+git clone https://github.com/imnhatnguyen/imnhatnguyen.com.git
+cd imnhatnguyen.com
 yarn install
 yarn dev
 ```

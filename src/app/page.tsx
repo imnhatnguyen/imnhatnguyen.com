@@ -22,20 +22,17 @@ export default function HomePage() {
   return (
     <>
       <header className='mt-32 flex flex-col'>
-        <h2 className='text-2xl font-semibold md:text-3xl 2xl:text-4xl'>
-          Xin chào
-        </h2>
-        <h1 className='-ml-0.5 mt-5 text-4xl md:text-5xl'>My name is Mason</h1>
+        <h1 className='-ml-0.5 mt-5 text-4xl md:text-5xl'>Hi, I'm Nhat</h1>
         <p className='mt-6 max-w-4xl text-lg text-gray-900 dark:text-gray-100'>
           I'm on my journey to design and build accessible, fast, secure, and
           beautiful products
         </p>
         <section className='mt-6 space-x-4'>
           <ButtonLink href='/projects/heni-beauty-hair-and-nails-salon'>
-            Pet project
+            Top project
           </ButtonLink>
           <ButtonLink href='/about' type='outlined'>
-            About me
+            My profile
           </ButtonLink>
         </section>
       </header>
