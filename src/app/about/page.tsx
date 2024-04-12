@@ -24,7 +24,7 @@ export default function AboutPage() {
           <CloudImage
             priority
             className='float-right ml-3 w-24 sm:w-36 md:ml-5 md:w-48 md:-translate-y-6 lg:-translate-y-12 xl:mr-4'
-            id='AIL4fc-v6FLfTRklgMVgBUxsHbx1pSWyxPoMuXUdbCpEnjvBjlawZIvFNC7kiriMa24S6G2cQCZhu87Kn7C1Bue71CTWYXGV--Ds0ACJmC24ZDpetGvaXsVl9sC55WJHHotJrV71uHNsKfJjH8_cQmFTC60'
+            id='AP1GczPTx3o1j8nTN-jmKiqef6jm6W-Tpc22kn47zp7xzZiUAcDLh_2Uo1WEwi43tlDUK1GCMCUPb04WIlg-Nx0iMJKfPpOr41RwU6yX2j6Bw8QebLDSgRdri-MBtjteNy-0BljEUzu84sSbwRowIlj-YmDI'
             // WHERE DOES THIS ID COME FROM?
             // See my explanation in file galleryImages.ts
             width={350}
