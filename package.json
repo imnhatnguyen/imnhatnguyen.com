@@ -31,7 +31,7 @@
     "tocbot": "^4.25.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.1",
+    "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.1.0",
     "@tailwindcss/typography": "^0.5.12",
     "@testing-library/react": "^15.0.1",
