@@ -1,0 +1,113 @@
+---
+title: Personal website
+publishedAt: 2023-12-05
+category: Personal project
+link: https://imnhatnguyen.com
+summary: LuLuLun Vietnam Cosmetics is a project where Nhat was responsible for customizing the website for the LuLuLun Vietnam Cosmetics
+image: AP1GczPtMHoqCXuI9ES34uIb3c9OMsGGNmowseQ0JkQXlW_YQ5Y2w-FeF4IkLVvWzTRKshOYFTcAsR6ZRRNE0t40bRk188Qvuv_xHBwQw7wZ8Klgb7su2aNGA6uJDepm5lj2u6DhR3m9ezGBn6yjmO543JEe
+---
+
+Yes. It is my favorite project and this post will be long.
+
+## 1. (Long) Introduction
+
+I quit my job as a developer in Dec 2021. At that time, I had a serious migraine. Whenever I thought of something, it felt like my brain was going to burst. That was mainly because of the Covid-19 pandemic. My family had Covid and we were moved to different hospitals, which made me very worried about my family members. During the time I was in the hospital, I had to work, but I was so depressed and I couldn't concentrate. Then, when I recovered from Covid, my team members still wanted to work from home. My home is actually not ideal for working as it has so much noise. The stress just accumulated, and one day, I became exhausted.
+
+<CloudImage
+  id='AP1GczNIkUX8NZ1hIT2zZRmQdtCNwdf7ja0a5Ii-FdEeGf56Yy2rOSMNqWp_B1D87ZaJ0BI4vBusuB47HVa0l23RiHAiHAtvfjHBi3btyvFZySjh27dmsrHo16duPbBwkAERT47-VqnJglOvbgg-qGfLFWN2'
+  alt='9:50pm July 24, 2021 at the Covid makeshift hospital where I stayed in'
+  width={500}
+  height={233}
+/>
+
+Another reason was that I wanted to earn the [Google UX Design Certificate](https://grow.google/certificates/ux-design) to pursue a career as a UX designer. When I worked at my old company, I had a chance to work with a UX designer. I hadn't known anything about UX design before, but through that project, I became curious about UX design and wanted to learn more about it. Then I realized that I am more suited to be a UX designer rather than a developer, so I wanted to spend time pursuing that certificate.
+
+I enrolled in the Google UX Design Certificate program. In the final week of the first course, learners are required to create a personal website to showcase their projects. The recommended web builders were Google Sites, Webflow, Squarespace, and Wix. I tried all of them, but found them to be slow. I also tried WordPress. However, at that time, I wanted to save money. Additionally, I thought being able to build websites would also be an advantage if I worked as a UX designer because I would work a lot with developers. So, I think it would be better for me to speak their language.
+
+One day, I visited the personal website of my friend Minh-Phuc Tran ([phuctm97.com](https://phuctm97.com/)). I took some time to look at that page and found it interesting because it loaded so fast and it was a single-page website. I also found out that he had his project open-sourced on GitHub. It was built using Next.js, and at that time, I didn't know anything about Next.js, so I spent time learning more about it.
+
+During my research on Next.js, I discovered the personal websites of Lee Robinson ([leerob.io](https://leerob.io)) and Theodorus Clarence ([theodorusclarence.com](https://theodorusclarence.com/)). I liked the styles on these websites and also appreciated the way they write to teach developers. I decided to fork their websites and started to learn more about Next.js. I began by making small modifications like changing text, color, or photos, and then moved on to bigger changes like altering the shapes of project cards or creating modules.
+
+I first used the source code of theororusclarence.com as the codebase. It looked great and had so many features. But then I realized that its design didn't suit my style, and I didn't think that my website visitors would really need as many features as it had. So, I added, removed, and changed many things with the help of [PageSpeed Insights](https://pagespeed.web.dev). And those can be categorized into four groups: accessibility, performance, security, and aesthetics.
+
+<CloudImage
+  id='AP1GczO17-_Enq5FNUjtw8Vh0dWm2juXJ8-jilBpAzV14f0zrX4M5Taw6mg6epZPCPdz5ZowkVM2maICE47xMzpiRHB5Tiq74CUAWbx7_J_CGvR6cLe0JZE_jVwZaNjGVTOq8Ys4-Z9Mg8UnEqNf7YA9DVRO'
+  alt='PageSpeed Insights report for imnhatnguyen.com (Desktop)'
+  width={550}
+  height={233}
+/>
+
+## 2. Technology stack
+
+The full list of dependencies can be found at **package.json**. Here I list the libraries that I actually worked with:
+
+- [Next.js](https://nextjs.org/) provides me with many built-in components which I can use to simplify my web development experience.
+- [Tailwind CSS](https://tailwindcss.com) helped me to build custom user interfaces without leaving my \*.tsx files.
+- With [Contentlayer](https://contentlayer.dev), I can write my content in markdown and embed photos, iframes, charts, source code, etc. and Contentlayer will handle the rest to convert them to type-safe JSON data.
+- [Photoswipe](https://photoswipe.com) is a perfomant lightbox gallery which supports both touch, mouse, and keyboard navigation.
+- [React Photo Album](https://react-photo-album.com) creates a responsive photo gallery.
+- [Tocbot](https://tscanlin.github.io/tocbot) can automatically create a clickable table of contents based on the headings in a markdown document. This makes it much simpler for readers to find specific information on the page.
+
+## 3. Lessons learned
+
+### 3.1. Accessibility
+
+The Google UX Design Certificate made me realize how important accessibility is to digital products. Adding accessibility support to your product will ultimately benefit everyone. For example, a page with a logical tab order not only benefits people who are using accessibility switches, but it can also help a developer navigate through the page quickly using the tab button.
+
+<Video
+  src='https://gist.github.com/assets/102733388/7194560a-3332-474d-ab41-5978abc11c7f'
+  width={550}
+  alt='Navigating through the website using the Tab key'
+/>
+
+On my website, I try to ensure that all the text has a minimum size of 16px and enough contrast so that it's easy for everyone to read. Or I added alt text for all the images on the website so that anyone using a screen reader can understand what is in the image.
+
+Another thing with which I struggled a lot is the dark theme. When using a dark background, if you use a very bright text color, it can cause eye strain for some people. Or a primary button with enough contrast between the text and the colored background may look ugly. That's why I also did spend a lot of time tweaking the dark theme.
+
+### 3.7. Performance
+
+I tried to make my website load as quickly as possible. Most of the time, users abandon an app or a website because it's slow, never because it's fast. My website has a lot of photos, so I needed to find ways to optimize them. I used a compression tool to convert the PNG or JPEG to WebP to preserve the quality but reduce the size. The tool that I used is [Caesium](https://github.com/Lymphatus/caesium-image-compressor). I also used Next.js's Image component to utilize its automatic image optimization features like size optimization, visual stability, and faster page loads.
+
+<CloudImage
+  id='AP1GczNWZ_VtjNorQQ3TMZW49YNbQVM7Q9c-b20_SygJT5hkVvRty76PIKgIpAdNpMj0WjLZbo4c3MA6TmFvPCffzTbHOFWlCuHjkdXT-sC5WvL6wvoReNRfPTyCtC0Pcq1KRffKWp3dr1hdpXdqBV5H3nco'
+  alt='Converting images from PNG or JPEG to WebP can preserve the quality but reduce the size'
+  width={500}
+  height={233}
+/>
+
+I've been taking photos since I was in high school, so I also wanted a place where I could showcase my photos on my website. That's the reason why I added the [Gallery page](/gallery). "However, I couldn’t find a ‘plug-and-play’ module on CodePen or anywhere else that loads images fast enough for me to use. So, I started to spend time researching on the Github Search page. I found [React Photo Album](https://github.com/igordanchenko/react-photo-album) and [PhotoSwipe](https://github.com/dimsemenov/PhotoSwipe). Integrating PhotoSwipe to React Photo Album took me a lot of time but it was worth the effort because both of them provide an adequate loading speed that I want.
+
+### 3.6. Security
+
+While working on this project, I initially attempted to use a database to track the views and likes of each post. However, I later removed this feature due to concerns about GDPR compliance and data protection. At present, given my limited understanding of these areas, I've chosen not to store any visitor data. Storing likes and views would require me to store IP addresses, which could potentially infringe on visitor privacy. Therefore, for now, I've decided against storing IP addresses.
+
+### 3.8. Aesthetic
+
+Another thing that I like about my website is the style. It's simple, with light color palettes and rounded corners. The colors I chose are mainly light, and when I combine them with strong rounded corners, it creates a very pleasing combination.
+
+### 3.4. Familiarity
+
+One aspect that I like about my website is the familiarity it provides to the user. For instance, the navigation bar is always fixed on the top left of the page. This allows users to know where they are on the website and they can immediately navigate to any page they want.
+
+Another feature is the gallery lightbox, which offers users the flexibility to navigate through images. Mobile users can swipe left or right, keyboard users can use the left and right keys, and mouse users can click the left and right arrows.
+
+<Video
+  src='https://gist.github.com/assets/102733388/4e305ef7-f515-43df-8f9f-90e4516b123f'
+  width={550}
+  alt='The gallery uses React Photo Album to create the grid and PhotoSwipe as the lightbox'
+/>
+
+On this website, I do not use any custom fonts, which means the website will use system fonts. For example, if a visitor is reading my website on a Windows device, the font rendered is Segoe. Alternatively, when they are reading my website on an Android device, the font is Roboto. This could help the web visitors read my content in a font that is familiar to them.
+
+All these features provide the user with a sense of familiarity and comfort. They don't have to learn how to use the website and can freely consume the content.
+
+<CloudImage
+  id='AP1GczOzrjeVucP_4DakE5wgh1j7DWIYpdJOL1gflaUE3UOwdZI5J3CbwEGuPxEgutwQzjga_2hlofup3MyPU1cxC5g8_a7aGUEJaI1aUpZNh4UZb6IvgKS7ZIRrEwWpJaabCkasAW39Cg_pGTyXk4Q89BlD'
+  alt='My About page'
+  width={500}
+  height={233}
+/>
+
+## 4. Conclusion
+
+Making a website accessible, fast, secure, and beautiful for visitors is a long journey, and I try to improve whenever I can. Every time I visit my website, I just feel so proud of the result that I've created. Though it doesn't wow the visitors with a lot of animations or graphics like other websites, it has a lot of other things such as accessibility, performance, familiarity, and security that build a good experience for the visitor.

@@ -29,7 +29,7 @@ export default function HomePage() {
         </p>
         <section className='mt-6 space-x-4'>
           <ButtonLink href='/projects/heni-beauty-hair-and-nails-salon'>
-            Top project
+            Favorite project
           </ButtonLink>
           <ButtonLink href='/about' type='outlined'>
             My profile

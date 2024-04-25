@@ -16,7 +16,7 @@ export default function Video({ src, width, alt }: VideoType) {
           label='English'
         />
       </video>
-      <figcaption className='-mt-5 text-center'>{alt}</figcaption>
+      <figcaption className='text-center'>{alt}</figcaption>
     </figure>
   );
 }
