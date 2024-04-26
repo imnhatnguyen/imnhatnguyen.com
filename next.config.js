@@ -36,6 +36,7 @@ const ContentSecurityPolicy = `
     media-src * blob: data:;
     connect-src *;
     font-src 'self' data:;
+    frame-src www.youtube.com;
 `;
 
 const securityHeaders = [
