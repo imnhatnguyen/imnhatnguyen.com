@@ -29,7 +29,7 @@
     "react-wrap-balancer": "^1.1.0",
     "rehype-pretty-code": "^0.13.1",
     "tailwind-merge": "^2.3.0",
-    "tocbot": "^4.27.13"
+    "tocbot": "^4.27.20"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
