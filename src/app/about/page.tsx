@@ -52,7 +52,7 @@ export default function AboutPage() {
         <Section section={languages} title='Languages' />
         <div className='-mb-2 mt-6 flex'>
           <ButtonLink
-            href='/pdfs/Nhat-Nguyen-resume.pdf'
+            href='/pdf/Nhat-Nguyen-resume.pdf'
             type='text'
             leftIcon={HiDownload}
             className='mx-auto'
