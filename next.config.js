@@ -30,14 +30,13 @@ const nextConfig = {
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
     default-src 'self' vercel.live;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com vercel.live;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.vercel-insights.com vercel.live *.googletagmanager.com;
     style-src 'self' 'unsafe-inline';
-    img-src * blob: data:;
+    img-src * blob: data: *.google-analytics.com *.googletagmanager.com;
     media-src * blob: data:;
-    connect-src *;
+    connect-src * *.google-analytics.com *.analytics.google.com *.googletagmanager.com;
     font-src 'self' data:;
     frame-src www.youtube-nocookie.com;
-    
 `;
 
 const securityHeaders = [
