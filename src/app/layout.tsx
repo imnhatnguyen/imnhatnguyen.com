@@ -1,6 +1,6 @@
-import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 import '@/styles/globals.css';
 
@@ -55,8 +55,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <GoogleAnalytics gaId='G-BERKT8B3VZG' />
+      <Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-BERKT8B3VZ'
+        strategy='afterInteractive'
+      />
+      <Script id='google-analytics' strategy='afterInteractive'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
+          gtag('config', 'G-BERKT8B3VZ');
+        `}
+      </Script>
       <body className='bg-white dark:bg-dark'>
         <Navbar />
         {children}
