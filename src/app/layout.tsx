@@ -55,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <GoogleAnalytics gaId={process.env.NODE_ENV} />
+      <GoogleAnalytics gaId='G-BERKT8B3VZG' />
 
       <body className='bg-white dark:bg-dark'>
         <Navbar />
