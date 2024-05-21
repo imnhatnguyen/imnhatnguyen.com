@@ -53,9 +53,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.GA_ID ?? '';
   return (
     <html lang='en'>
-      <GoogleAnalytics gaId='G-BERKT8B3VZ' />
+      <GoogleAnalytics gaId={gaId} />
       <body className='bg-white dark:bg-dark'>
         <Navbar />
         {children}
