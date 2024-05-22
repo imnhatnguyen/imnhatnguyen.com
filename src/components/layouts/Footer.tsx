@@ -1,3 +1,4 @@
+import { sendGAEvent } from '@next/third-parties/google';
 import Link from 'next/link';
 import { SiBehance, SiGithub, SiLinkedin } from 'react-icons/si';
 
@@ -20,7 +21,16 @@ export default function Footer() {
 function UtilityLinks() {
   return (
     <section className='flex space-x-8'>
-      <Link href='/pdf/Nhat-Nguyen-resume.pdf'>Resume</Link>
+      <Link
+        href='/pdf/Nhat-Nguyen-resume.pdf'
+        onClick={() =>
+          sendGAEvent('download_resume', 'buttonClicked', {
+            value: 'download_resume_value',
+          })
+        }
+      >
+        Resume
+      </Link>
       <Link href='https://github.com/imnhatnguyen/imnhatnguyen.com'>Code</Link>
     </section>
   );
