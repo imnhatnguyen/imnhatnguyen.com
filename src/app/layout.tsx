@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 
@@ -54,6 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <GoogleAnalytics gaId={process.env.GA_ID ?? ''} />
       <body className='bg-white dark:bg-dark'>
         <Navbar />
         {children}
