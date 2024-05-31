@@ -1,3 +1,5 @@
+'use client';
+
 import { sendGAEvent } from '@next/third-parties/google';
 import Link from 'next/link';
 import { SiBehance, SiGithub, SiLinkedin } from 'react-icons/si';
