@@ -249,13 +249,14 @@ const honors = [
     date: 'Oct 2019',
     description: (
       <div>
-        One of the 10 recipients from Vietnam National University - Ho Chi Minh
-        City who had:
+        Became the only awarded student from the University of Information
+        Technology who:
         <ul>
           <li>
-            ・ The Annual GPA of 8.5 or higher for the 2018-2019 academic year
+            ・ Had the Annual GPA of 8.5 or higher for the 2018-2019 academic
+            year
           </li>
-          <li>・ Good academic achievements </li>
+          <li>・ Achieved good academic results</li>
         </ul>
       </div>
     ),
