@@ -173,6 +173,15 @@ const licenses = [
     description: <p>Skills: HTML, CSS</p>,
   },
   {
+    id: 'foundationofuxdesign-googlecareer',
+    title: 'Foundations of User Experience Design',
+    org: 'Google Career Certificates',
+    logoId:
+      'AP1GczMZwBrvOLuoZrl75MACRs2cM07rD3ev1HeMV4GuGinzRAlkCD0t-zTZDO8m5jyZtJCMlkfqhtsThSzKxmT6g4ZHxDbbvqVM_kQFxnhEoD1L_j8heAf48MEE7fPgIzXoWr0QDnfUiUBNUPLnFZtb11VE',
+    date: 'Apr 2022',
+    description: <p>Skills: UX Fundamentals</p>,
+  },
+  {
     id: 'deeplearning-deeplearningai',
     title: 'Deep Learning Specialization',
     org: 'DeepLearning.AI',
