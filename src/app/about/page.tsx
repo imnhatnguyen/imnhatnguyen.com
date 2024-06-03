@@ -228,8 +228,8 @@ const volunteering = [
     date: 'Jan 2017 - Feb 2017',
     description: (
       <div>
-        Was awarded the Mission Accomplishment certificate as the Deputy Team
-        Leader of a team making handmade products with these main tasks:
+        Was awarded the Mission Accomplishment title as the Deputy Team Leader
+        of a team making handmade products with these main tasks:
         <ul>
           <li>・ Took and edited photos for the final products</li>
           <li>・ Managed the team when the leader was busy with meetings</li>
