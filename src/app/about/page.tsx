@@ -261,6 +261,30 @@ const honors = [
       </div>
     ),
   },
+  {
+    id: 'award-digital-race',
+    title:
+      ' First Prize (Team of four) - University round - FPT Digital Race 2017-2018',
+    org: 'FPT Corporation',
+    logoId:
+      'AP1GczNzVoPsmCko-rTKUMIEx2apQZOC8kwVYA3Tv3vqMn18rAra6MeMmv5-5Gcfqko70B3gce-9IXwBfJ5EIkDEVeeOH7htTW_VLuI3Kw66TUG-lJLfhZr6RVbuSdbD_tDeBBL18J53_5Chk1x-XhrWL0rU',
+    date: 'Jan 2018',
+    description: (
+      <div>
+        My team, who won the First prize in the University round:
+        <ul>
+          <li>
+            ・ Got the highest combined score across the Computer Vision, Fast
+            Programming, and Knowledge in Technology rounds
+          </li>
+          <li>
+            ・ Was the delegate from my university to participate in the
+            semi-final round of the competition
+          </li>
+        </ul>
+      </div>
+    ),
+  },
 ];
 
 const languages = [
