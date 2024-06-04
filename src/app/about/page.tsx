@@ -166,7 +166,7 @@ const licenses = [
   {
     id: 'responsivewebdesign-freecodecamp',
     title: 'Responsive Web Design Certification',
-    org: 'freeCodeCamp.org',
+    org: 'freeCodeCamp',
     logoId:
       'AIL4fc9HVJKICGwF23U6xoqynlCQAVqcglMsI24LyMCGYoVZqZWkQA6cdsuJb7FHRk1MEUAiszbPpBBRGF3RO4_pYn_MYqf2CRFojreqIuRY1lUYJgMs3XpM02awo9f5QTWZFwmDZA6ql5qJ7Tf3u-d3LiE',
     date: 'Oct 2022',
