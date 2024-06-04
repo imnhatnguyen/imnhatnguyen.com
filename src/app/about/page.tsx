@@ -295,6 +295,12 @@ const languages = [
     logoId: 'null',
   },
   {
+    id: 'languages-japanese',
+    title: 'Japanese',
+    description: <p>Elementary proficiency</p>,
+    logoId: 'null',
+  },
+  {
     id: 'languages-vietnamese',
     title: 'Vietnamese',
     description: <p>Native proficiency</p>,
