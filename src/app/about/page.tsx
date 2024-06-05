@@ -117,23 +117,86 @@ function Section({ section, title }: SectionType) {
 
 const experience = [
   {
-    id: 'dev-vinai',
-    title: 'Developer',
-    org: 'VinAI • Full-time',
+    id: 'website-admin-mshop',
+    title: 'Website Admin',
+    org: 'MCARE PLUS (MCV Group) • Freelance',
     logoId:
-      'AIL4fc8AVUYkffvn04hMSOBAehSeE_ViBGzTMLl34KGFdoOMLYhB9xsgy8l6aRsXmBj5vzwqvmywu7ExP47FZnlOp_TiNKZ8l80sQjlVt6DVSySdWu4Mu38hY8AdT8J25AgWkTdhCRiHLTW_NhBSMwEDDJ8',
-    date: 'Oct 2021 - Dec 2021',
-    description: <p> Skills: JavaScript, React</p>,
+      'AP1GczPLDCcjGemHE02IA1jBYSUub9MU3ME1y-PqLJ--ysqNsD00jmv3WTumFz2OHgfdBMmVo3PA8JQrjV8tXQ01JfTmL4QskQS1zd61YCfpLmlgjXjRW83YNAEuklBDYQVZ43G30lkQZg0UfKBlGxF12vwC',
+    date: 'Nov 2023 - Jan 2024',
+    description: (
+      <div>
+        <p> Skills: CSS, Photoshop</p>
+        <ul>
+          Website Admin for LuLuLun.vn and SamVietnamNippon.vn (on Haravan’s
+          platform):
+          <li>
+            ・ Improved user experience by modifying the CSS source code of the
+            provided template to make the website align with the design
+          </li>
+          <li>
+            ・ Provided website visitors with detailed product descriptions by
+            translating and editing Japanese and English sources
+          </li>
+          <li>
+            ・ Reduced Page Load Time to increase Average Visit Duration by
+            editing, compressing, and cropping images using Photoshop
+          </li>
+        </ul>
+      </div>
+    ),
   },
   {
-    id: 'intern-vinai',
-    title: 'Middleware Intern',
+    id: 'dev-designer-henibeauty',
+    title: 'Designer and Developer',
+    org: 'HeNi Beauty Hair and Nails Salon • Freelance',
+    logoId:
+      'AP1GczPSCnp7VhbS7iyvbXkS2sygxSGKXoXrz6vzFE03AD5HmGDeYR9QHAfDKdkTN0sIvPsXrEZh3u_uvrr8CYJpS3KEwLYH77Mwi4IPub7f50CHmhbzL39ycF6_KbkButB5G_lkw7BrAy1BcsxAYMeuEpSe',
+    date: 'Oct 2022 - Dec 2022',
+    description: (
+      <div>
+        <p> Skills: Next.js, Tailwind CSS, Figma</p>
+        <ul>
+          <li>
+            ・ Created a modern and memorable brand identity for the salon by
+            designing the logo, name card, banner, and price list using Figma
+          </li>
+          <li>
+            ・ Enabled the salon to showcase nail photos by developing a website
+            using Next.js and Tailwind CSS
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: 'dev-inter-vinai',
+    title: 'Intern and Developer',
     org: 'VinAI • Full-time',
     logoId:
       'AIL4fc8AVUYkffvn04hMSOBAehSeE_ViBGzTMLl34KGFdoOMLYhB9xsgy8l6aRsXmBj5vzwqvmywu7ExP47FZnlOp_TiNKZ8l80sQjlVt6DVSySdWu4Mu38hY8AdT8J25AgWkTdhCRiHLTW_NhBSMwEDDJ8',
-    date: 'Mar 2021 - Oct 2021',
-    description: <p>Skills: C++, SQLite, Data Distribution Service</p>,
+    date: 'Mar 2021 - Dec 2021',
+    description: (
+      <div>
+        <p> Skills: C++, SQLite, React</p>
+        <ul>
+          Intern and Developer in the Advanced Driver Assistance Systems
+          project:
+          <li>
+            ・ Implemented the requirement to store data from vehicle sensors by
+            developing the module with SQLite, C++
+          </li>
+          <li>
+            ・ Provided stakeholders an intuitive way to view Lidar data by
+            integrating the 3D model of the vehicle into the data visualizer
+            using React
+          </li>
+        </ul>
+      </div>
+    ),
   },
+];
+
+const education = [
   {
     id: 'trainee-vinbigdata',
     title: 'Artificial Intelligence Trainee',
@@ -141,11 +204,17 @@ const experience = [
     logoId:
       'AIL4fc-gFyhiebS5wUsNOAcMvQAZdPCo8BhFwuC1Strngw-UCCtgMlz8ofzfed7znFCeKIQhKGEikRZYpWlb35kXlto9VOrhAsJ3MBK0BsPMMdaGacALg9L4GyLM3eiIFfJjSm3YWREiz2EzzwIRiKnJbDk',
     date: 'Nov 2020 - Mar 2021',
-    description: <p>Skills: Python, TensorFlow</p>,
+    description: (
+      <div>
+        <p> Skills: Python, TensorFlow</p>
+        <ul>
+          Attended in foundational courses to get ready to join in Vingroup's
+          key technology projects: Linear Algebra, Statistics and Probability,
+          Deep Learning, Computer Vision, Natural Language Processing, AI Ethics
+        </ul>
+      </div>
+    ),
   },
-];
-
-const education = [
   {
     id: 'bachelor-uit',
     title: 'Bachelor of Science in Computer Science',
@@ -166,11 +235,20 @@ const licenses = [
   {
     id: 'responsivewebdesign-freecodecamp',
     title: 'Responsive Web Design Certification',
-    org: 'freeCodeCamp.org',
+    org: 'freeCodeCamp',
     logoId:
       'AIL4fc9HVJKICGwF23U6xoqynlCQAVqcglMsI24LyMCGYoVZqZWkQA6cdsuJb7FHRk1MEUAiszbPpBBRGF3RO4_pYn_MYqf2CRFojreqIuRY1lUYJgMs3XpM02awo9f5QTWZFwmDZA6ql5qJ7Tf3u-d3LiE',
     date: 'Oct 2022',
     description: <p>Skills: HTML, CSS</p>,
+  },
+  {
+    id: 'foundationofuxdesign-googlecareer',
+    title: 'Foundations of User Experience Design',
+    org: 'Google Career Certificates',
+    logoId:
+      'AP1GczMZwBrvOLuoZrl75MACRs2cM07rD3ev1HeMV4GuGinzRAlkCD0t-zTZDO8m5jyZtJCMlkfqhtsThSzKxmT6g4ZHxDbbvqVM_kQFxnhEoD1L_j8heAf48MEE7fPgIzXoWr0QDnfUiUBNUPLnFZtb11VE',
+    date: 'Apr 2022',
+    description: <p>Skills: UX Fundamentals</p>,
   },
   {
     id: 'deeplearning-deeplearningai',
@@ -219,11 +297,11 @@ const volunteering = [
     date: 'Jan 2017 - Feb 2017',
     description: (
       <div>
-        Helped lead a team that created handmade products to successfully raise
-        enough money for charity:
+        Was awarded the Mission Accomplishment title as the Deputy Team Leader
+        of a team making handmade products with these main tasks:
         <ul>
-          <li>・ Took photos for the final products</li>
-          <li>・ Managed the team when the leader was busy </li>
+          <li>・ Took and edited photos for the final products</li>
+          <li>・ Managed the team when the leader was busy with meetings</li>
         </ul>
       </div>
     ),
@@ -240,13 +318,38 @@ const honors = [
     date: 'Oct 2019',
     description: (
       <div>
-        One of the 10 recipients from Vietnam National University - Ho Chi Minh
-        City who had:
+        Became the only awarded student from the University of Information
+        Technology who:
         <ul>
           <li>
-            ・ The Annual GPA of 8.5 or higher for the 2018-2019 academic year
+            ・ Had the Annual GPA of 8.5 or higher for the 2018-2019 academic
+            year
           </li>
-          <li>・ Good academic achievements </li>
+          <li>・ Achieved good academic results</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    id: 'award-digital-race',
+    title:
+      ' First Prize (Team of four) - University round - FPT Digital Race 2017-2018',
+    org: 'FPT Corporation',
+    logoId:
+      'AP1GczNzVoPsmCko-rTKUMIEx2apQZOC8kwVYA3Tv3vqMn18rAra6MeMmv5-5Gcfqko70B3gce-9IXwBfJ5EIkDEVeeOH7htTW_VLuI3Kw66TUG-lJLfhZr6RVbuSdbD_tDeBBL18J53_5Chk1x-XhrWL0rU',
+    date: 'Jan 2018',
+    description: (
+      <div>
+        My team, who won the First prize in the University round:
+        <ul>
+          <li>
+            ・ Got the highest combined score across the Computer Vision, Fast
+            Programming, and Knowledge in Technology rounds
+          </li>
+          <li>
+            ・ Was the delegate from my university to participate in the
+            semi-final round of the competition
+          </li>
         </ul>
       </div>
     ),
@@ -258,6 +361,12 @@ const languages = [
     id: 'languages-english',
     title: 'English',
     description: <p>Professional working proficiency</p>,
+    logoId: 'null',
+  },
+  {
+    id: 'languages-japanese',
+    title: 'Japanese',
+    description: <p>Elementary proficiency</p>,
     logoId: 'null',
   },
   {
