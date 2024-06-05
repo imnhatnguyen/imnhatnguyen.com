@@ -169,22 +169,30 @@ const experience = [
     ),
   },
   {
-    id: 'dev-vinai',
-    title: 'Developer',
+    id: 'dev-inter-vinai',
+    title: 'Intern and Developer',
     org: 'VinAI • Full-time',
     logoId:
       'AIL4fc8AVUYkffvn04hMSOBAehSeE_ViBGzTMLl34KGFdoOMLYhB9xsgy8l6aRsXmBj5vzwqvmywu7ExP47FZnlOp_TiNKZ8l80sQjlVt6DVSySdWu4Mu38hY8AdT8J25AgWkTdhCRiHLTW_NhBSMwEDDJ8',
-    date: 'Oct 2021 - Dec 2021',
-    description: <p> Skills: JavaScript, React</p>,
-  },
-  {
-    id: 'intern-vinai',
-    title: 'Middleware Intern',
-    org: 'VinAI • Full-time',
-    logoId:
-      'AIL4fc8AVUYkffvn04hMSOBAehSeE_ViBGzTMLl34KGFdoOMLYhB9xsgy8l6aRsXmBj5vzwqvmywu7ExP47FZnlOp_TiNKZ8l80sQjlVt6DVSySdWu4Mu38hY8AdT8J25AgWkTdhCRiHLTW_NhBSMwEDDJ8',
-    date: 'Mar 2021 - Oct 2021',
-    description: <p>Skills: C++, SQLite, Data Distribution Service</p>,
+    date: 'Mar 2021 - Dec 2021',
+    description: (
+      <div>
+        <p> Skills: C++, SQLite, React</p>
+        <ul>
+          Intern and Developer in the Advanced Driver Assistance Systems
+          project:
+          <li>
+            ・ Implemented the requirement to store data from vehicle sensors by
+            developing the module with SQLite, C++
+          </li>
+          <li>
+            ・ Provided stakeholders an intuitive way to view Lidar data by
+            integrating the 3D model of the vehicle into the data visualizer
+            using React
+          </li>
+        </ul>
+      </div>
+    ),
   },
 ];
 
