@@ -204,7 +204,16 @@ const education = [
     logoId:
       'AIL4fc-gFyhiebS5wUsNOAcMvQAZdPCo8BhFwuC1Strngw-UCCtgMlz8ofzfed7znFCeKIQhKGEikRZYpWlb35kXlto9VOrhAsJ3MBK0BsPMMdaGacALg9L4GyLM3eiIFfJjSm3YWREiz2EzzwIRiKnJbDk',
     date: 'Nov 2020 - Mar 2021',
-    description: <p>Skills: Python, TensorFlow</p>,
+    description: (
+      <div>
+        <p> Skills: Python, TensorFlow</p>
+        <ul>
+          Attended in foundational courses to get ready to join in Vingroup's
+          key technology projects: Linear Algebra, Statistics and Probability,
+          Deep Learning, Computer Vision, Natural Language Processing, AI Ethics
+        </ul>
+      </div>
+    ),
   },
   {
     id: 'bachelor-uit',
