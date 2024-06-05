@@ -117,6 +117,35 @@ function Section({ section, title }: SectionType) {
 
 const experience = [
   {
+    id: 'website-admin-mshop',
+    title: 'Website Admin',
+    org: 'MCARE PLUS (MCV Group) • Freelance',
+    logoId:
+      'AP1GczPLDCcjGemHE02IA1jBYSUub9MU3ME1y-PqLJ--ysqNsD00jmv3WTumFz2OHgfdBMmVo3PA8JQrjV8tXQ01JfTmL4QskQS1zd61YCfpLmlgjXjRW83YNAEuklBDYQVZ43G30lkQZg0UfKBlGxF12vwC',
+    date: 'Nov 2023 - Jan 2024',
+    description: (
+      <div>
+        <p> Skills: CSS, Photoshop</p>
+        <ul>
+          Website Admin for LuLuLun.vn and SamVietnamNippon.vn (on Haravan’s
+          platform):
+          <li>
+            ・ Improved user experience by modifying the CSS source code of the
+            provided template to make the website correspond with the design
+          </li>
+          <li>
+            ・ Provided website visitors with detailed product descriptions by
+            translating and editing Japanese and English sources
+          </li>
+          <li>
+            ・ Reduced Page Load Time to increase Average Visit Duration by
+            editing, compressing, and cropping images using Photoshop
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
     id: 'dev-vinai',
     title: 'Developer',
     org: 'VinAI • Full-time',
