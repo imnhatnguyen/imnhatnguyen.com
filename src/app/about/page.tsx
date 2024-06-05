@@ -146,6 +146,29 @@ const experience = [
     ),
   },
   {
+    id: 'dev-designer-henibeauty',
+    title: 'Designer and Developer',
+    org: 'HeNi Beauty Hair and Nails Salon • Freelance',
+    logoId:
+      'AP1GczPSCnp7VhbS7iyvbXkS2sygxSGKXoXrz6vzFE03AD5HmGDeYR9QHAfDKdkTN0sIvPsXrEZh3u_uvrr8CYJpS3KEwLYH77Mwi4IPub7f50CHmhbzL39ycF6_KbkButB5G_lkw7BrAy1BcsxAYMeuEpSe',
+    date: 'Oct 2022 - Dec 2022',
+    description: (
+      <div>
+        <p> Skills: Next.js, Tailwind CSS, Figma</p>
+        <ul>
+          <li>
+            ・ Created a modern and memorable brand identity for the salon by
+            designing the logo, name card, banner, and price list using Figma
+          </li>
+          <li>
+            ・ Enabled the salon to showcase nail photos by developing a website
+            using Next.js and Tailwind CSS
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
     id: 'dev-vinai',
     title: 'Developer',
     org: 'VinAI • Full-time',
