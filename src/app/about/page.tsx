@@ -134,6 +134,9 @@ const experience = [
     date: 'Mar 2021 - Oct 2021',
     description: <p>Skills: C++, SQLite, Data Distribution Service</p>,
   },
+];
+
+const education = [
   {
     id: 'trainee-vinbigdata',
     title: 'Artificial Intelligence Trainee',
@@ -143,9 +146,6 @@ const experience = [
     date: 'Nov 2020 - Mar 2021',
     description: <p>Skills: Python, TensorFlow</p>,
   },
-];
-
-const education = [
   {
     id: 'bachelor-uit',
     title: 'Bachelor of Science in Computer Science',
