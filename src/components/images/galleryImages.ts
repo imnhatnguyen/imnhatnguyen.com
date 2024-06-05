@@ -72,6 +72,17 @@ const galleryImages = [
     },
   },
   {
+    id: 'AP1GczOAWPTN_1Anv_wLQvDfRotaDijt2uOZ-TYjKQ86BEm7Hlx6iEYzw848GJFBzLt-M7MbI2jQ8xZuZaMb4VlJCLYVh2s0FbsULC3lVV_4cK8Ad1nUzwLIolv_B5gqs-IrFFS95py4qhfYw-wh_hTPFRs',
+    width: 4724,
+    height: 12598,
+    caption: {
+      title: 'AMO 2017 standee',
+      date: 'May 7, 2017',
+      description:
+        'AMO 2017 UIT is a contest for students majoring in Integrated Circuit Design. Therefore, the corners and edges of each letter in the logo were inspired by the pins and wires on Printed Circuit Boards.',
+    },
+  },
+  {
     id: 'AIL4fc_rajnVAkEW2twYzxODTu8z_g0hLq5xmgG4vjPdm_pmAvV5zgprX7Oz4hcOa2h5KuQVy824_v2SFu7t-Z3MAKzDPmP6sEuN3tFZ4YDA3nOzKdvxb9NT5y0QRfuTgv-bAP1odWukoAjQVTDBOurIioU',
     width: 3404,
     height: 1260,
@@ -117,6 +128,17 @@ const galleryImages = [
     },
   },
   {
+    id: 'AP1GczMTJQ6-oR43b8LTIKOO48Pq52VGb4nRmFs1EC2YjDko4V0aul52uw_ur8AaJ-tEhLVUHn9WtbuhnLfsny-3mF8Jlu0I1Ia45hJuBOHf6MiRfBPEfDN5WZOTICz86iU3o9DGlvSZFfXt5y3tDcuEghM',
+    width: 2686,
+    height: 2686,
+    caption: {
+      title: 'Daisy pot',
+      date: 'Jan 6, 2017',
+      description:
+        'A pot of daisy which was made to raise money for the charity of the annual Spring Volunteer campaign at my college.',
+    },
+  },
+  {
     id: 'AIL4fc9keRrgazISGYDNfvkaU-urCofE4qxQPIgKS-N878rJwIIai2iKVMFCLMsRUwEu5QjBQPeAjbkZvCdhar5kgYRnTiGhaSkmOuwlKAeD86l62b-U2UtjsGZrDufVsBJko9qbMXX5gmASSpvOfbMgzHU',
     width: 3674,
     height: 5526,
@@ -125,6 +147,28 @@ const galleryImages = [
       date: 'Sep 2, 2021',
       description:
         'PuriTea facial cleanser from the cosmetics brand <a href="https://minimalbeauty.vn/" target="_blank">/li:st/</a>',
+    },
+  },
+  {
+    id: 'AP1GczNdpKrpEE_IA0c3iy_j7nCb7IsZkXg6NkBePR__Qce94SC2D4Vi360gV2TmeFKOo5PDPF2n0j5-KSRb7V0R5nwXfJvIl_tRoxFDbaQGwJt4Esp3o87l-Dflyij1dVOJyY8NIeAXlMrHp9OkfGYcIxM',
+    width: 3943,
+    height: 5930,
+    caption: {
+      title: 'PuriTea cleanser box',
+      date: 'Sep 2, 2021',
+      description:
+        'PuriTea facial cleanser box design from the cosmetics brand <a href="https://minimalbeauty.vn/" target="_blank">/li:st/</a>',
+    },
+  },
+  {
+    id: 'AP1GczP2DNbFTS-P1EcSRnugkQep4jsKonvvaGSTO-srhdFRqhYzMqG-eBvCm9rhTSf4FAAyVgrPM1gUHFcsoX1l86u5tnMPoypppm2LuFGAlaOtChzTa715dZaEmpIffrwI8-3CFRD79Yrp86CHw06qopM',
+    width: 5589,
+    height: 3716,
+    caption: {
+      title: '/li:st/ product line',
+      date: 'Sep 2, 2021',
+      description:
+        'Product line of the cosmetics brand <a href="https://minimalbeauty.vn/" target="_blank">/li:st/</a> including the balm, the mask, the cleanser and the serum',
     },
   },
 ];
