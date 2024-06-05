@@ -131,7 +131,7 @@ const experience = [
           platform):
           <li>
             ・ Improved user experience by modifying the CSS source code of the
-            provided template to make the website correspond with the design
+            provided template to make the website align with the design
           </li>
           <li>
             ・ Provided website visitors with detailed product descriptions by
